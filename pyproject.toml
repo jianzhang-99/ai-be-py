@@ -1,0 +1,70 @@
+[project]
+name = "ai-be-py"
+version = "0.1.0"
+description = "航运领域 AI Agent 服务 - 基于 LangGraph"
+requires-python = ">=3.11"
+dependencies = [
+    # Web Framework
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    "sse-starlette>=2.0.0",
+
+    # LangGraph / LangChain
+    "langgraph>=0.2.0",
+    "langchain-core>=0.3.0",
+    "langchain-deepseek>=0.1.0",
+
+    # LLM
+    "deepseek>=0.1.0",
+    "langchain-openai>=0.1.0",
+
+    # Database
+    "aiomysql>=0.2.0",
+    "sqlalchemy[asyncio]>=2.0.0",
+
+    # Cache
+    "redis>=5.0.0",
+    "aioredis>=2.0.0",
+
+    # Vector
+    "pymilvus>=2.4.0",
+
+    # Utils
+    "bcrypt>=4.1.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "python-dotenv>=1.0.0",
+    "httpx>=0.27.0",
+    "tenacity>=8.0.0",
+
+    # MCP
+    "mcp>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "pytest-cov>=4.0.0",
+    "ruff>=0.4.0",
+    "mypy>=1.8.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["backend"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
