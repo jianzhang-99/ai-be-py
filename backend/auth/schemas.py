@@ -3,6 +3,7 @@ from __future__ import annotations
 """Schemas used by the authentication module."""
 
 from datetime import datetime
+from typing import Optional
 
 from pydantic import BaseModel, Field
 
@@ -11,17 +12,17 @@ class ResultResponse(BaseModel):
     """Java-style API result wrapper used by manager endpoints."""
 
     code: int
-    data: object | None
+    data: Optional[object] = None
     msg: str
 
     @classmethod
-    def success(cls, data: object | None = None, msg: str = "成功") -> "ResultResponse":
+    def success(cls, data: Optional[object] = None, msg: str = "成功") -> "ResultResponse":
         """Build a successful result payload."""
 
         return cls(code=0, data=data, msg=msg)
 
     @classmethod
-    def failure(cls, code: int, msg: str, data: object | None = None) -> "ResultResponse":
+    def failure(cls, code: int, msg: str, data: Optional[object] = None) -> "ResultResponse":
         """Build a failed result payload."""
 
         return cls(code=code, data=data, msg=msg)
@@ -48,20 +49,20 @@ class CurrentUserResponse(BaseModel):
     userId: int
     phone: str
     token: str
-    nickName: str | None = None
-    lastLoginTime: datetime | None = None
+    nickName: Optional[str] = None
+    lastLoginTime: Optional[datetime] = None
 
 
 class AuthUser(BaseModel):
-    """Internal authenticated user model."""
+    """Internal authenticated user model (maps to ld_test.sys_user)."""
 
     id: int
     phone: str
     password_hash: str
-    nick_name: str | None = None
-    status: int = 1
+    nick_name: Optional[str] = None
+    status: int = 1  # 0=正常, 1=禁用
     is_delete: bool = False
-    last_login_time: datetime | None = None
+    last_login_time: Optional[datetime] = None
 
 
 class SessionInfo(BaseModel):

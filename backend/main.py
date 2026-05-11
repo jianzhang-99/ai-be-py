@@ -7,7 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from backend.auth.middleware import AuthMiddleware
 from backend.config import get_settings
-from backend.api.routers import auth, chat, health
+from backend.api.routers import auth, chat, health, session
 
 settings = get_settings()
 
@@ -32,6 +32,7 @@ app.add_middleware(AuthMiddleware)
 app.include_router(auth.router)
 app.include_router(chat.router)
 app.include_router(health.router)
+app.include_router(session.router)
 
 
 @app.get("/")

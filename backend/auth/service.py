@@ -11,8 +11,8 @@ import bcrypt
 from backend.auth.schemas import AuthUser, CurrentUserResponse, LoginRequest, LoginResponse, SessionInfo
 
 PHONE_PATTERN = re.compile(r"^1[3-9]\d{9}$")
-STATUS_NORMAL = 1
-STATUS_DISABLE = 2
+STATUS_NORMAL = 1   # ld_test.sys_user.status: 1=正常
+STATUS_DISABLE = 0  # ld_test.sys_user.status: 0=禁用（实际未使用，保留兼容性）
 
 
 class AuthError(Exception):
@@ -63,44 +63,22 @@ class AuthSessionStore:
 
 
 class AuthService:
-    """Service layer for login, logout, and current-user lookup."""
+    """Async service layer for login, logout, and current-user lookup.
+
+    数据来源：sys_user 表（通过 SysUserRepository）。
+    Session 仍在内存中（token → SessionInfo）。
+    """
 
     def __init__(self) -> None:
-        self._users_by_phone = self._load_default_users()
-        self._users_by_id = {user.id: user for user in self._users_by_phone.values()}
         self._sessions = AuthSessionStore()
 
-    def _hash_password(self, password: str) -> str:
-        """Hash a plaintext password with bcrypt for stored demo users."""
-
-        return bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt()).decode("utf-8")
-
-    def _load_default_users(self) -> dict[str, AuthUser]:
-        """Bootstrap manager users until a real database-backed user module lands."""
-
-        users = [
-            AuthUser(
-                id=1,
-                phone="13800138000",
-                password_hash=self._hash_password("123456"),
-                nick_name="测试用户",
-            ),
-            AuthUser(
-                id=2,
-                phone="13900000000",
-                password_hash=self._hash_password("admin123"),
-                nick_name="管理员",
-            ),
-        ]
-        return {user.phone: user for user in users}
-
-    def login(self, request: LoginRequest) -> LoginResponse:
-        """Validate phone/password and issue a token."""
+    async def login(self, request: LoginRequest, repo: "SysUserRepositoryProtocol") -> LoginResponse:
+        """验证手机号/密码，从数据库查用户，签发 token 并更新登录时间。"""
 
         if not PHONE_PATTERN.match(request.phone):
             raise AuthError(1001, "手机号码不正确")
 
-        user = self._users_by_phone.get(request.phone)
+        user = await repo.find_by_phone(request.phone)
         if user is None or user.is_delete or user.status == STATUS_DISABLE:
             raise AuthError(1002, "用户名或密码不正确")
 
@@ -112,23 +90,26 @@ class AuthService:
             raise AuthError(1002, "用户名或密码不正确")
 
         user.last_login_time = datetime.now()
+        await repo.update_last_login(user_id=user.id)
         session = self._sessions.create_session(user_id=user.id, phone=user.phone)
         return LoginResponse(userId=user.id, phone=user.phone, token=session.token)
 
-    def logout(self, token: str | None) -> None:
+    async def logout(self, token: str | None) -> None:
         """Revoke the current token if the caller is logged in."""
 
         if token:
             self._sessions.revoke_token(token)
 
-    def get_current_user(self, token: str) -> CurrentUserResponse:
-        """Load the current user from the presented token."""
+    async def get_current_user(
+        self, token: str, repo: "SysUserRepositoryProtocol"
+    ) -> CurrentUserResponse:
+        """从 session 拿 user_id，再从数据库查最新用户信息。"""
 
         session = self._sessions.get_session(token)
         if session is None:
             raise AuthError(401, "未登录或登录已过期，请重新登录")
 
-        user = self._users_by_id.get(session.user_id)
+        user = await repo.find_by_id(session.user_id)
         if user is None or user.is_delete or user.status == STATUS_DISABLE:
             self._sessions.revoke_token(token)
             raise AuthError(401, "未登录或登录已过期，请重新登录")
@@ -141,7 +122,20 @@ class AuthService:
             lastLoginTime=user.last_login_time,
         )
 
-    def authenticate_token(self, token: str) -> CurrentUserResponse:
+    async def authenticate_token(
+        self, token: str, repo: "SysUserRepositoryProtocol"
+    ) -> CurrentUserResponse:
         """Alias used by middleware for token validation."""
 
-        return self.get_current_user(token)
+        return await self.get_current_user(token, repo)
+
+
+# 协议用于 type hint，避免循环 import
+from typing import Protocol
+
+class SysUserRepositoryProtocol(Protocol):
+    """SysUserRepository 的最小接口子集。"""
+
+    async def find_by_phone(self, phone: str) -> AuthUser | None: ...
+    async def find_by_id(self, user_id: int) -> AuthUser | None: ...
+    async def update_last_login(self, user_id: int, login_ip: str = "") -> None: ...

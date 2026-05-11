@@ -9,7 +9,7 @@ from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.responses import JSONResponse, Response
 
 from backend.auth.constants import AUTHORIZATION, BEARER_PREFIX, PHONE, USER_ID
-from backend.auth.deps import get_auth_service
+from backend.auth.deps import get_auth_service, get_sys_user_repository
 from backend.auth.service import AuthError
 
 PUBLIC_PATHS = {
@@ -50,9 +50,10 @@ class AuthMiddleware(BaseHTTPMiddleware):
             return self._unauthorized_response()
 
         auth_service = get_auth_service()
+        user_repo = get_sys_user_repository()
 
         try:
-            current_user = auth_service.authenticate_token(token)
+            current_user = await auth_service.authenticate_token(token, user_repo)
         except AuthError:
             return self._unauthorized_response()
 
