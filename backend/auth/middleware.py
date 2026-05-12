@@ -8,7 +8,13 @@ from fastapi import Request
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.responses import JSONResponse, Response
 
-from backend.auth.constants import AUTHORIZATION, BEARER_PREFIX, PHONE, USER_ID
+from backend.auth.constants import (
+    AUTHORIZATION,
+    BEARER_PREFIX,
+    PHONE,
+    TOKEN_COOKIE_NAME,
+    USER_ID,
+)
 from backend.auth.deps import get_auth_service, get_sys_user_repository
 from backend.auth.service import AuthError
 
@@ -21,6 +27,13 @@ PUBLIC_PATHS = {
     "/redoc",
     "/auth/login",
     "/auth/logout",
+    "/metrics",
+    "/api/ship/search",
+    "/api/ship/detail",
+    "/api/ship/fuzzy-search",
+    "/api/order/preview",
+    "/api/order/submit",
+    "/api/order/query",
 }
 
 PUBLIC_PREFIXES = (
@@ -29,6 +42,8 @@ PUBLIC_PREFIXES = (
     "/v3",
     "/webjars",
     "/swagger-resources",
+    "/ai/chat/history/share/",
+    "/oss/file/",
 )
 
 
@@ -73,10 +88,20 @@ class AuthMiddleware(BaseHTTPMiddleware):
         """Read the Authorization header and normalize the Bearer token."""
 
         authorization = request.headers.get(AUTHORIZATION)
-        if not authorization or not authorization.startswith(BEARER_PREFIX):
-            return None
-        token = authorization[len(BEARER_PREFIX):].strip()
-        return token or None
+        if authorization and authorization.startswith(BEARER_PREFIX):
+            token = authorization[len(BEARER_PREFIX):].strip()
+            if token:
+                return token
+
+        cookie_token = request.cookies.get(TOKEN_COOKIE_NAME)
+        if cookie_token:
+            return cookie_token.strip() or None
+
+        query_token = request.query_params.get("token")
+        if query_token:
+            return query_token.strip() or None
+
+        return None
 
     def _unauthorized_response(self) -> JSONResponse:
         """Return the same shape the Java interceptor writes."""

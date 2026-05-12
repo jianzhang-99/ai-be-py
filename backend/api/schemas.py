@@ -21,6 +21,10 @@ class ChatRequest(BaseModel):
     user_id: Optional[str] = Field(default=None, description="User identifier")
     session_id: Optional[str] = Field(default=None, description="Session identifier")
     history: list[Message] = Field(default_factory=list, description="Conversation history")
+    scene: Optional[str] = Field(default=None, description="Requested scene code")
+    model: Optional[str] = Field(default=None, description="Requested model name")
+    app_source: Optional[str] = Field(default=None, description="Client app source")
+    attachments: list[dict[str, Any]] = Field(default_factory=list, description="Uploaded attachments")
 
 
 class ChatResponse(BaseModel):

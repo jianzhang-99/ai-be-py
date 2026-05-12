@@ -1,0 +1,4 @@
+{"id": "real_00194", "history": [], "query": "有个体验上的小建议：筛选条件能不能记住上次选的港口？", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}, "metadata": {"section": "反馈"}}
+{"id": "real_00195", "history": [], "query": "客服电话打不通", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}, "metadata": {"section": "反馈"}}
+{"id": "real_00196", "history": [], "query": "更新后闪退特别频繁", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}, "metadata": {"section": "反馈"}}
+{"id": "real_00197", "history": [], "query": "投诉查船功能不好用", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}, "metadata": {"section": "反馈"}}

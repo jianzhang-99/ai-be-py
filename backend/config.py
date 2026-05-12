@@ -61,6 +61,7 @@ class Settings(BaseSettings):
     oss_access_secret: str = Field(default="Fx4sYFaynPwjrezCC7UQOZmYvXZxX9EnJ8JYt4F8", alias="OSS_ACCESS_SECRET")
     oss_bucket: str = Field(default="test-public-ydd", alias="OSS_BUCKET")
     oss_domain: str = Field(default="testpublicimage.yundundun.com", alias="OSS_DOMAIN")
+    local_upload_dir: str = Field(default="storage/oss", alias="LOCAL_UPLOAD_DIR")
 
     # ========== MCP 配置 ==========
     mcp_server_url: str = Field(default="http://localhost:8080", alias="MCP_SERVER_URL")
@@ -75,6 +76,13 @@ class Settings(BaseSettings):
     # ========== 地图配置 ==========
     map_base_url: str = Field(default="https://test2-map.yundundun.com", alias="MAP_BASE_URL")
     map_encrypt_key: str = Field(default="ydd2024#hips@(!.", alias="MAP_ENCRYPT_KEY")
+
+    # ========== 多模态输入配置 ==========
+    fabrx_api_key: str = Field(default="typ_live_K9itf29zqDyOl_jvH-UbCvb90c17rRPlQx75ldVI8Ek", alias="FABRX_API_KEY")
+    fabrx_endpoint: str = Field(
+        default="https://api.fabrx.ai/api/v1/invoice-processor-mkyw8kjg",
+        alias="FABRX_ENDPOINT",
+    )
 
     # ========== 工作记忆配置 ==========
     working_memory_enabled: bool = Field(default=True, alias="WORKING_MEMORY_ENABLED")

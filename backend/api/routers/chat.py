@@ -2,6 +2,8 @@ from __future__ import annotations
 
 """阶段一 MVP 的聊天 API 路由。"""
 
+import json
+
 from fastapi import APIRouter, Depends
 from sse_starlette.sse import EventSourceResponse
 
@@ -22,7 +24,7 @@ async def chat_stream(
         async for event in service.chat_stream(request):
             yield {
                 "event": event.event,
-                "data": event.data,
+                "data": json.dumps(event.data, ensure_ascii=False),
             }
 
     return EventSourceResponse(event_generator())

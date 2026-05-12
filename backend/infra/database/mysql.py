@@ -88,6 +88,24 @@ class MySQLClient:
                     cursor.execute(sql, params)
                     conn.commit()
 
+    def insert(self, sql: str, params: tuple[Any, ...]) -> int:
+        """执行插入并返回自增主键。"""
+
+        conn = self.get_connection()
+        with self._lock:
+            try:
+                with conn.cursor() as cursor:
+                    cursor.execute(sql, params)
+                    conn.commit()
+                    return int(cursor.lastrowid or 0)
+            except pymysql.err.OperationalError:
+                self._local.conn = None
+                conn = self.get_connection()
+                with conn.cursor() as cursor:
+                    cursor.execute(sql, params)
+                    conn.commit()
+                    return int(cursor.lastrowid or 0)
+
     async def fetch_one_async(self, sql: str, params: tuple[Any, ...]) -> dict[str, Any] | None:
         """异步执行单条查询"""
 
@@ -118,6 +136,11 @@ class MySQLClient:
         """异步执行写操作"""
 
         await asyncio.to_thread(self.execute, sql, params)
+
+    async def insert_async(self, sql: str, params: tuple[Any, ...]) -> int:
+        """异步执行插入并返回自增主键。"""
+
+        return await asyncio.to_thread(self.insert, sql, params)
 
     async def update_last_login_async(self, user_id: int) -> None:
         """更新用户最近登录时间"""

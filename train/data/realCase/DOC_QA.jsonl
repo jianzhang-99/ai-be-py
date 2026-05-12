@@ -1,0 +1,5 @@
+{"id": "real_00203", "history": [], "query": "详细介绍一下运吨吨", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答、Q&A"}}
+{"id": "real_00204", "history": [], "query": "详细介绍一下自己", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答、Q&A"}}
+{"id": "real_00205", "history": [], "query": "你能做什么？", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答、Q&A"}}
+{"id": "real_00206", "history": [], "query": "注册需要什么信息？", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答、Q&A"}}
+{"id": "real_00207", "history": [], "query": "怎么注册账号？", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答、Q&A"}}

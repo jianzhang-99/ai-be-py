@@ -2,14 +2,13 @@ from __future__ import annotations
 
 """规范化请求/响应处理的聊天服务。"""
 
-import asyncio
+import json
 import uuid
 from typing import AsyncGenerator
 
 from backend.api.schemas import ChatEvent, ChatRequest, ChatResponse, ChatStreamResponse
 from backend.graph.workflows.chat_workflow import ChatWorkflow
-from backend.infra.database.repositories.chat_message_repo import ChatMessageRepository
-from backend.infra.database.repositories.chat_session_repo import ChatSessionRepository
+from backend.infra.database.repositories.chat_log_repo import ChatLogRepository
 
 
 class ChatService:
@@ -17,8 +16,7 @@ class ChatService:
 
     def __init__(self):
         self.workflow = ChatWorkflow()
-        self._session_repo = ChatSessionRepository()
-        self._message_repo = ChatMessageRepository()
+        self._log_repo = ChatLogRepository()
 
     async def chat_stream(
         self, request: ChatRequest
@@ -28,36 +26,7 @@ class ChatService:
         session_id = request.session_id or str(uuid.uuid4())
         user_id = request.user_id or "anonymous"
         history = [message.model_dump() for message in request.history]
-
-        # 创建会话（若不存在）
-        user_id_int = self._parse_user_id(user_id)
-        if user_id_int is not None:
-            existing = await self._session_repo.get_session(session_id)
-            if existing is None:
-                await self._session_repo.create_session(
-                    user_id=user_id_int,
-                    session_id=session_id,
-                    scene="DEFAULT",
-                )
-
-        # 记录消息开始时间用于计算延迟
-        msg_start = asyncio.get_event_loop().time()
-        user_content = request.message
-
-        # 保存用户消息
-        if user_id_int is not None:
-            await self._message_repo.save_message(
-                session_id=session_id,
-                role="user",
-                content=user_content,
-            )
-
-        # 执行工作流
-        assistant_content = ""
-        intent_name = None
-        tool_name_used = None
-        tool_result_str = None
-        assistant_start = asyncio.get_event_loop().time()
+        final_response = ""
 
         async for event in self.workflow.run_stream(
             user_input=request.message,
@@ -65,34 +34,14 @@ class ChatService:
             session_id=session_id,
             history=history,
         ):
+            if event.event == "response":
+                final_response = str(event.data.get("text", ""))
             yield {
                 "event": event.event,
                 "data": event.data,
             }
 
-            # 收集完整响应和工具信息
-            if event.event == "intent" and event.data:
-                intent_name = event.data.get("intent")
-            elif event.event == "tool_start" and event.data:
-                tool_name_used = event.data.get("tool")
-            elif event.event == "tool_result" and event.data:
-                tool_result_str = str(event.data.get("result", ""))
-            elif event.event == "response" and event.data:
-                assistant_content = event.data.get("text", "")
-            elif event.event == "done":
-                # 流结束，计算延迟并保存助手消息
-                assistant_end = asyncio.get_event_loop().time()
-                latency_ms = int((assistant_end - assistant_start) * 1000)
-                if user_id_int is not None and assistant_content:
-                    await self._message_repo.save_message(
-                        session_id=session_id,
-                        role="assistant",
-                        content=assistant_content,
-                        intent=intent_name,
-                        tool_name=tool_name_used,
-                        tool_result=tool_result_str,
-                        latency_ms=latency_ms,
-                    )
+        await self._persist_chat_log(request, session_id, final_response)
 
     def _parse_user_id(self, user_id: str) -> int | None:
         """尝试将 user_id 解析为整数"""
@@ -111,25 +60,6 @@ class ChatService:
         user_id = request.user_id or "anonymous"
         history = [message.model_dump() for message in request.history]
 
-        # 创建会话
-        user_id_int = self._parse_user_id(user_id)
-        if user_id_int is not None:
-            existing = await self._session_repo.get_session(session_id)
-            if existing is None:
-                await self._session_repo.create_session(
-                    user_id=user_id_int,
-                    session_id=session_id,
-                    scene="DEFAULT",
-                )
-
-        # 保存用户消息
-        if user_id_int is not None:
-            await self._message_repo.save_message(
-                session_id=session_id,
-                role="user",
-                content=request.message,
-            )
-
         result = await self.workflow.run_simple(
             user_input=request.message,
             user_id=user_id,
@@ -137,21 +67,132 @@ class ChatService:
             history=history,
         )
 
-        # 保存助手消息
-        if user_id_int is not None and result.get("response_text"):
-            intent_obj = result.get("intent")
-            await self._message_repo.save_message(
-                session_id=session_id,
-                role="assistant",
-                content=result["response_text"],
-                intent=intent_obj.intent if intent_obj else None,
-                tool_name=result.get("tool_name"),
-                tool_result=str(result.get("tool_result", "")) if result.get("tool_result") else None,
-                latency_ms=None,
-            )
+        await self._persist_chat_log(request, session_id, result.get("response_text", ""), result=result)
 
         return ChatResponse(
             message=result.get("response_text", ""),
             session_id=session_id,
             intent=result["intent"].intent if result.get("intent") else None,
         )
+
+    async def chat_ai_be_stream(
+        self,
+        request: ChatRequest,
+        phone: str | None = None,
+    ) -> AsyncGenerator[dict[str, str | dict], None]:
+        """兼容 Java `/ai/chat` 的 SSE 负载结构。"""
+
+        session_id = request.session_id or str(uuid.uuid4())
+        user_id = request.user_id or "anonymous"
+        history = [message.model_dump() for message in request.history]
+        final_response = ""
+        intent_code: str | None = None
+        scene_code = request.scene or "TALK"
+
+        async for event in self.workflow.run_stream(
+            user_input=request.message,
+            user_id=user_id,
+            session_id=session_id,
+            history=history,
+        ):
+            if event.event == "intent":
+                intent = str(event.data.get("intent") or "")
+                intent_code = intent or None
+                if intent:
+                    scene_code = intent
+                yield self._build_ai_be_event(
+                    "THINKING",
+                    self._build_thinking_message(intent),
+                )
+                continue
+
+            if event.event == "tool_start":
+                yield self._build_ai_be_event(
+                    "THINKING",
+                    f"正在调用{event.data.get('tool', '工具')}能力，请稍候",
+                )
+                continue
+
+            if event.event == "response":
+                final_response = str(event.data.get("text", ""))
+                yield self._build_ai_be_event("TEXT", final_response)
+                continue
+
+        await self._persist_chat_log(
+            request,
+            session_id,
+            final_response,
+            phone=phone,
+            intent_code=intent_code,
+            scene_code=scene_code,
+        )
+        yield self._build_ai_be_event("DONE", None)
+
+    async def _persist_chat_log(
+        self,
+        request: ChatRequest,
+        session_id: str,
+        response_text: str,
+        phone: str | None = None,
+        result: dict | None = None,
+        intent_code: str | None = None,
+        scene_code: str | None = None,
+    ) -> None:
+        """保存兼容 Java 版的聊天日志。"""
+
+        user_id_int = self._parse_user_id(request.user_id)
+        if user_id_int is None:
+            return
+
+        chat_result = result or {}
+        intent_obj = chat_result.get("intent")
+        resolved_intent_code = intent_code or (intent_obj.intent if intent_obj else None)
+        resolved_scene_code = str(scene_code or chat_result.get("scene") or request.scene or "TALK")
+        original_request = {
+            "input": request.message,
+            "sessionId": session_id,
+            "scene": request.scene,
+            "model": request.model,
+            "appSource": request.app_source,
+            "attachments": request.attachments,
+        }
+        await self._log_repo.save_log(
+            session_id=session_id,
+            phone=phone or str(user_id_int),
+            user_id=user_id_int,
+            user_input=request.message,
+            ai_response=response_text,
+            intent_code=resolved_intent_code,
+            intent_name=resolved_intent_code,
+            scene_code=resolved_scene_code,
+            scene_name=self._scene_name(resolved_scene_code),
+            model_name=request.model,
+            original_request=json.dumps(original_request, ensure_ascii=False),
+        )
+
+    def _scene_name(self, scene_code: str) -> str:
+        """将场景编码映射为展示名称。"""
+
+        mapping = {
+            "TALK": "闲聊问答",
+            "QUERY_WEATHER": "天气查询",
+            "QUERY_SHIP": "船舶查询",
+            "SAVE_ORDER": "运单录入",
+        }
+        return mapping.get(scene_code, scene_code)
+
+    def _build_thinking_message(self, intent: str | None) -> str:
+        """返回较贴近前端预期的思考提示。"""
+
+        mapping = {
+            "QUERY_WEATHER": "正在识别为天气查询并准备检索天气信息",
+            "QUERY_SHIP": "正在识别为船舶查询并准备检索船舶信息",
+            "SAVE_ORDER": "正在识别为运单场景并提取运单要素",
+            "TALK": "正在理解你的问题",
+        }
+        return mapping.get(intent or "", "正在处理你的问题")
+
+    def _build_ai_be_event(self, event_type: str, content: object) -> dict[str, str]:
+        """构造 AI-BE 兼容的 SSE 数据负载。"""
+
+        return {"type": event_type, "content": content}

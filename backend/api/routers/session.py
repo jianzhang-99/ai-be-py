@@ -6,22 +6,15 @@ from fastapi import APIRouter, Depends, Request
 
 from backend.auth.constants import USER_ID
 from backend.auth.schemas import ResultResponse
-from backend.infra.database.repositories.chat_message_repo import ChatMessageRepository
-from backend.infra.database.repositories.chat_session_repo import ChatSessionRepository
+from backend.infra.database.repositories.chat_log_repo import ChatLogRepository
+from backend.infra.database.repositories.sys_user_repository import SysUserRepository
 
 router = APIRouter(prefix="/api/session", tags=["session"])
 
 
-def get_session_repo() -> ChatSessionRepository:
-    """返回会话仓储实例"""
-
-    return ChatSessionRepository()
-
-
-def get_message_repo() -> ChatMessageRepository:
-    """返回消息仓储实例"""
-
-    return ChatMessageRepository()
+def get_chat_log_repo() -> ChatLogRepository:
+    """返回聊天日志仓储实例"""
+    return ChatLogRepository()
 
 
 @router.get("/list")
@@ -29,7 +22,7 @@ async def list_sessions(
     request: Request,
     limit: int = 20,
     offset: int = 0,
-    repo: ChatSessionRepository = Depends(get_session_repo),
+    repo: ChatLogRepository = Depends(get_chat_log_repo),
 ) -> ResultResponse:
     """获取当前用户的会话列表"""
 
@@ -42,17 +35,23 @@ async def list_sessions(
     if offset < 0:
         return ResultResponse.failure(1001, "offset 参数不能为负数")
 
-    sessions = await repo.list_user_sessions(user_id, limit, offset)
+    # 通过 user_id 查手机号
+    user_repo = SysUserRepository()
+    user = await user_repo.find_by_id(user_id)
+    if user is None:
+        return ResultResponse.failure(2001, "用户未登录")
+
+    sessions = await repo.list_by_phone(user.phone, limit=limit, offset=offset)
 
     # 转换 datetime 为字符串
     data = []
     for s in sessions:
         data.append({
-            "session_id": s["session_id"],
-            "scene": s["scene"],
-            "status": s["status"],
-            "create_time": str(s["create_time"]) if s["create_time"] else None,
-            "update_time": str(s["update_time"]) if s["update_time"] else None,
+            "session_id": s.get("session_id"),
+            "scene_code": s.get("scene_code"),
+            "scene_name": s.get("scene_name"),
+            "last_time": str(s.get("last_time")) if s.get("last_time") else None,
+            "msg_count": s.get("msg_count"),
         })
 
     return ResultResponse.success(data=data)
@@ -64,8 +63,7 @@ async def get_session_history(
     request: Request,
     limit: int = 50,
     offset: int = 0,
-    session_repo: ChatSessionRepository = Depends(get_session_repo),
-    message_repo: ChatMessageRepository = Depends(get_message_repo),
+    repo: ChatLogRepository = Depends(get_chat_log_repo),
 ) -> ResultResponse:
     """获取指定会话的历史消息"""
 
@@ -78,27 +76,18 @@ async def get_session_history(
     if offset < 0:
         return ResultResponse.failure(1001, "offset 参数不能为负数")
 
-    # 校验会话归属
-    session = await session_repo.get_session(session_id)
-    if session is None:
-        return ResultResponse.failure(2002, "会话不存在")
-
-    if session["user_id"] != user_id:
-        return ResultResponse.failure(2003, "无权访问此会话")
-
-    messages = await message_repo.list_session_messages(session_id, limit, offset)
+    messages = await repo.list_by_session_id(session_id, limit=limit, offset=offset)
 
     # 转换 datetime 为字符串
     data = []
     for m in messages:
         data.append({
-            "role": m["role"],
-            "content": m["content"],
-            "intent": m["intent"],
-            "tool_name": m["tool_name"],
-            "tool_result": m["tool_result"],
-            "latency_ms": m["latency_ms"],
-            "create_time": str(m["create_time"]) if m["create_time"] else None,
+            "user_input": m.get("user_input"),
+            "ai_response": m.get("ai_response"),
+            "intent_code": m.get("intent_code"),
+            "intent_name": m.get("intent_name"),
+            "scene_code": m.get("scene_code"),
+            "create_time": str(m.get("create_time")) if m.get("create_time") else None,
         })
 
     return ResultResponse.success(data=data)
