@@ -1,0 +1,596 @@
+{"id": "real_00016", "history": [], "query": "华航118什么时候到港", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "华航118"}, "need_clarify": false}}
+{"id": "real_00038", "history": [], "query": "苏盐城货209388什么时候到装货港", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "苏盐城货209388", "route_to": "装货港"}, "need_clarify": false}}
+{"id": "real_00040", "history": [], "query": "现在淮安船闸上行有多少条船在等待", "label": {"intent": "QUERY_SHIP", "slots": {"port_name": "淮安"}, "need_clarify": false}}
+{"id": "real_00150", "history": [], "query": "麻烦查下南京装的砂石运单历史", "label": {"intent": "QUERY_ORDER", "slots": {"cargo_name": "砂石"}, "need_clarify": false}}
+{"id": "real_00152", "history": [], "query": "帮我查去年10月南京到武汉的运单", "label": {"intent": "QUERY_ORDER", "slots": {"route_to": "武汉的运单", "date_time": "10月"}, "need_clarify": false}}
+{"id": "real_00154", "history": [], "query": "以前从南京港走矿石到宜昌的运单有吗", "label": {"intent": "QUERY_ORDER", "slots": {"port_name": "南京港", "cargo_name": "矿石", "route_from": "南京港走矿石", "route_to": "宜昌的运单有"}, "need_clarify": false}}
+{"id": "real_00013", "history": [], "query": "华航118在哪", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "华航118"}, "need_clarify": false}}
+{"id": "real_00014", "history": [], "query": "帮我查下华航118现在到哪了", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "华航118"}, "need_clarify": false}}
+{"id": "real_00015", "history": [], "query": "华航118现在位置发我一下", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "华航118"}, "need_clarify": false}}
+{"id": "real_00017", "history": [], "query": "查一下华航118预计几点到南京", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "华航118", "route_to": "南京"}, "need_clarify": false}}
+{"id": "real_00018", "history": [], "query": "麻烦查下长江之星6号现在在哪", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "长江之星6号"}, "need_clarify": false}}
+{"id": "real_00019", "history": [], "query": "长江之星 6 号走到哪段了", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "real_00020", "history": [], "query": "帮我看下江海888的位置", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "江海888"}, "need_clarify": false}}
+{"id": "real_00021", "history": [], "query": "苏货运01现在在哪个水域", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "苏货运01"}, "need_clarify": false}}
+{"id": "real_00022", "history": [], "query": "皖航339预计什么时候到重庆", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "皖航339", "route_to": "重庆"}, "need_clarify": false}}
+{"id": "real_00023", "history": [], "query": "浙海运66到港时间帮我看下", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "浙海运66"}, "need_clarify": false}}
+{"id": "real_00024", "history": [], "query": "查一下金顺168当前位置", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "金顺168"}, "need_clarify": false}}
+{"id": "real_00025", "history": [], "query": "兴隆09的轨迹查下", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "兴隆09"}, "need_clarify": false}}
+{"id": "real_00026", "history": [], "query": "华航018现在在哪儿", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "华航018"}, "need_clarify": false}}
+{"id": "real_00027", "history": [], "query": "帮我查下我那条船江海888进度怎么样", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "江海888"}, "need_clarify": false}}
+{"id": "real_00028", "history": [], "query": "华航118到重庆果园港大概还要多久", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "华航118", "port_name": "重庆果园港"}, "need_clarify": false}}
+{"id": "real_00029", "history": [], "query": "江海888现在到哪一段了", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "江海888", "route_to": "哪一段了"}, "need_clarify": false}}
+{"id": "real_00030", "history": [], "query": "苏货运01预计几点到镇江港", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "苏货运01", "port_name": "镇江港", "route_to": "镇江港"}, "need_clarify": false}}
+{"id": "real_00031", "history": [], "query": "查一下华航118位置和到港时间", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "华航118", "route_to": "港时间"}, "need_clarify": false}}
+{"id": "real_00032", "history": [], "query": "帮我看下长江之星6号什么时候到重庆果园港", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "长江之星6号", "port_name": "重庆果园港", "route_to": "重庆果园港"}, "need_clarify": false}}
+{"id": "real_00033", "history": [], "query": "俞垛79到哪了", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "俞垛79"}, "need_clarify": false}}
+{"id": "real_00034", "history": [], "query": "帮我查一下俞垛79现在在哪里", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "俞垛79"}, "need_clarify": false}}
+{"id": "real_00035", "history": [], "query": "俞垛79现在在哪", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "俞垛79"}, "need_clarify": false}}
+{"id": "real_00036", "history": [], "query": "帮我查下俞垛79到哪了", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "俞垛79"}, "need_clarify": false}}
+{"id": "real_00037", "history": [], "query": "鲁济宁货6366到哪里了", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "鲁济宁货6366"}, "need_clarify": false}}
+{"id": "real_00084", "history": [], "query": "帮我看下南京->重庆这条线近期运力", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "real_00085", "history": [], "query": "查一下南京到武汉运力，煤炭5000吨，3月底装", "label": {"intent": "QUERY_SHIP", "slots": {"cargo_name": "煤炭", "cargo_weight": "5000吨", "date_time": "3月"}, "need_clarify": false}}
+{"id": "real_00089", "history": [], "query": "我这票货南京装武汉卸，砂石3000吨，下周装，看下有啥船", "label": {"intent": "QUERY_SHIP", "slots": {"cargo_name": "砂石", "cargo_weight": "3000吨", "date_time": "下周"}, "need_clarify": false}}
+{"id": "real_00092", "history": [], "query": "从南京港出发到宜昌的驳船，3000-5000吨查一下", "label": {"intent": "QUERY_SHIP", "slots": {"port_name": "南京港", "cargo_weight": "5000吨", "route_from": "从南京港出发"}, "need_clarify": false}}
+{"id": "real_00104", "history": [], "query": "帮我看看南京附近有没有空船", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "real_00107", "history": [], "query": "请帮我看下江北周边有什么货船", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "real_00115", "history": [], "query": "麻烦看下镇江附近的船舶分布", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "real_00117", "history": [], "query": "查一下南京港周边5000吨船多不多", "label": {"intent": "QUERY_SHIP", "slots": {"port_name": "南京港", "cargo_weight": "5000吨"}, "need_clarify": false}}
+{"id": "real_00122", "history": [], "query": "帮我看下南京到镇江沿线附近的船", "label": {"intent": "QUERY_SHIP", "slots": {"route_to": "镇江沿线附近"}, "need_clarify": false}}
+{"id": "real_00124", "history": [], "query": "查一下南京附近有什么散货船可以接砂石", "label": {"intent": "QUERY_SHIP", "slots": {"cargo_name": "砂石"}, "need_clarify": false}}
+{"id": "real_00127", "history": [], "query": "帮我查一下重庆附近的船", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "real_00131", "history": [], "query": "小吨，帮我查一下九江东毅码头附近1500吨的船", "label": {"intent": "QUERY_SHIP", "slots": {"cargo_weight": "1500吨"}, "need_clarify": false}}
+{"id": "real_00148", "history": [], "query": "帮我看一下江海888去年10月的运单", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "江海888", "date_time": "10月"}, "need_clarify": false}}
+{"id": "real_00149", "history": [], "query": "查一下南京到重庆去年下半年的运单", "label": {"intent": "QUERY_ORDER", "slots": {"route_to": "重庆去年下半"}, "need_clarify": false}}
+{"id": "real_00153", "history": [], "query": "查一下最近三个月重庆果园港卸货的运单", "label": {"intent": "QUERY_SHIP", "slots": {"port_name": "重庆果园港"}, "need_clarify": false}}
+{"id": "real_00155", "history": [], "query": "查一下装货地南京龙潭，货物砂石，上个月的运单", "label": {"intent": "QUERY_SHIP", "slots": {"port_name": "南京龙潭", "cargo_name": "砂石"}, "need_clarify": false}}
+{"id": "real_00157", "history": [], "query": "帮我查一下之前跟张三合作那几票货的运单", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "real_00158", "history": [], "query": "查一下我以前从南京到重庆的砂石运单", "label": {"intent": "QUERY_SHIP", "slots": {"cargo_name": "砂石", "route_from": "我以前从南京", "route_to": "重庆的砂石运"}, "need_clarify": false}}
+{"id": "real_00165", "history": [], "query": "帮我看下南京到重庆这条线这两天天气怎么样", "label": {"intent": "QUERY_WEATHER", "slots": {"route_to": "重庆这条线这"}, "need_clarify": false}}
+{"id": "real_00169", "history": [], "query": "查一下安庆附近水域今晚天气", "label": {"intent": "QUERY_WEATHER", "slots": {}, "need_clarify": false}}
+{"id": "real_00171", "history": [], "query": "帮我看下南京港本周天气趋势", "label": {"intent": "QUERY_WEATHER", "slots": {"port_name": "南京港", "date_time": "本周"}, "need_clarify": false}}
+{"id": "real_00183", "history": [], "query": "查一下南京附近航道水位", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {}, "need_clarify": false}}
+{"id": "real_00191", "history": [], "query": "帮我看下镇江到南京这段通航水深是否正常", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {"route_to": "南京这段通航"}, "need_clarify": false}}
+{"id": "real_00212", "history": [], "query": "我想考船员适任证书在哪里考", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "real_00219", "history": [], "query": "安徽在哪", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "real_00224", "history": [], "query": "帮我看一下，从芜湖到淮南，我需要过几道闸", "label": {"intent": "QUERY_SHIP", "slots": {"port_name": "芜湖", "route_from": "从芜湖", "route_to": "淮南"}, "need_clarify": false}}
+{"id": "real_00225", "history": [], "query": "帮我查一下闸口信息", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_ship_0001", "history": [], "query": "这条船的轨迹", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_ship_0002", "history": [], "query": "武穴号预计什么时候到港", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_ship_0003", "history": [], "query": "武穴号现在到哪了", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_ship_0004", "history": [], "query": "南京7现在到哪了", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_ship_0005", "history": [], "query": "华航118预计什么时候到港", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_ship_0006", "history": [], "query": "长江之星6号现在到哪了", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_ship_0007", "history": [], "query": "查一下南京7的位置", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_ship_0009", "history": [], "query": "俞垛79在哪", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_ship_0011", "history": [], "query": "俞垛79现在到哪了", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_ship_0012", "history": [], "query": "华航118现在到哪了", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_ship_0014", "history": [], "query": "查一下长江之星6号的位置", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_ship_0015", "history": [], "query": "武穴号在哪", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_ship_0019", "history": [], "query": "查一下俞垛79的位置", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_ship_0020", "history": [], "query": "查一下华航118的位置", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_ship_0030", "history": [], "query": "查一下武穴号的位置", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_ship_0033", "history": [], "query": "南京7预计什么时候到港", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_ship_0035", "history": [], "query": "南京7在哪", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_ship_0039", "history": [], "query": "长江之星6号在哪", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_ship_0049", "history": [], "query": "俞垛79预计什么时候到港", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_ship_0051", "history": [], "query": "长江之星6号预计什么时候到港", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "real_00208", "history": [], "query": "你好", "label": {"intent": "TALK", "slots": {}, "need_clarify": false}}
+{"id": "real_00210", "history": [], "query": "航行中要注意哪些安全事项", "label": {"intent": "TALK", "slots": {}, "need_clarify": false}}
+{"id": "real_00211", "history": [], "query": "安全法规有哪些？", "label": {"intent": "TALK", "slots": {}, "need_clarify": false}}
+{"id": "real_00214", "history": [], "query": "过淮安船闸排队要多久", "label": {"intent": "QUERY_SHIP", "slots": {"port_name": "淮安"}, "need_clarify": false}}
+{"id": "real_00216", "history": [], "query": "太仓武港到南钢需要开船开多久", "label": {"intent": "TALK", "slots": {"route_from": "太仓武港"}, "need_clarify": false}}
+{"id": "real_00217", "history": [], "query": "你是什么模型", "label": {"intent": "TALK", "slots": {}, "need_clarify": false}}
+{"id": "real_00218", "history": [], "query": "你是用的什么ai模型？", "label": {"intent": "TALK", "slots": {}, "need_clarify": false}}
+{"id": "real_00220", "history": [], "query": "怎么才能定", "label": {"intent": "TALK", "slots": {}, "need_clarify": false}}
+{"id": "sample_talk_0001", "history": [], "query": "早上好", "label": {"intent": "TALK", "slots": {}, "need_clarify": false}}
+{"id": "sample_talk_0002", "history": [], "query": "你们这个怎么用", "label": {"intent": "TALK", "slots": {}, "need_clarify": false}}
+{"id": "sample_talk_0003", "history": [], "query": "帮我查一下", "label": {"intent": "TALK", "slots": {}, "need_clarify": false}}
+{"id": "sample_talk_0017", "history": [], "query": "在吗", "label": {"intent": "TALK", "slots": {}, "need_clarify": false}}
+{"id": "real_00041", "history": [], "query": "江阴/靖江——黑山路，沙子，单机一条", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "real_00042", "history": [], "query": "如皋港务——朱马闸里，沙子，1000吨左右单机", "label": {"intent": "FIND_SHIP", "slots": {"port_name": "如皋港务", "cargo_weight": "1000吨"}, "need_clarify": false}}
+{"id": "real_00043", "history": [], "query": "鄂州——扬中珩群，沙子，8000-9000吨单机", "label": {"intent": "FIND_SHIP", "slots": {"cargo_weight": "9000吨"}, "need_clarify": false}}
+{"id": "real_00044", "history": [], "query": "台儿庄——颖上太和镇，抛江石，1000吨左右单机，需要单机数条，宽9米左右", "label": {"intent": "FIND_SHIP", "slots": {"cargo_name": "砂石", "cargo_weight": "1000吨"}, "need_clarify": false}}
+{"id": "real_00045", "history": [], "query": "湖口、彭泽—淮安红日港，需1600吨左右，石子，随到随装", "label": {"intent": "FIND_SHIP", "slots": {"port_name": "湖口", "cargo_name": "石子", "cargo_weight": "1600吨"}, "need_clarify": false}}
+{"id": "real_00046", "history": [], "query": "涡阳，到，海门港闸内，煤研石，船到就装，有定金，装卸快，", "label": {"intent": "FIND_SHIP", "slots": {"port_name": "涡阳"}, "need_clarify": false}}
+{"id": "real_00047", "history": [], "query": "盱眙三河，到，湘潭，煤泥，2000吨左右，船到就装，有定金，装卸快", "label": {"intent": "FIND_SHIP", "slots": {"port_name": "盱眙", "cargo_name": "煤炭", "cargo_weight": "2000吨"}, "need_clarify": false}}
+{"id": "real_00048", "history": [], "query": "寻船", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "real_00049", "history": [], "query": "宁德--台州5000内近期", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "real_00050", "history": [], "query": "宁德--温州5000吨", "label": {"intent": "FIND_SHIP", "slots": {"cargo_weight": "5000吨"}, "need_clarify": false}}
+{"id": "real_00051", "history": [], "query": "宁德--宁波5000吨", "label": {"intent": "FIND_SHIP", "slots": {"cargo_weight": "5000吨"}, "need_clarify": false}}
+{"id": "real_00052", "history": [], "query": "宁德--南通5000近期", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "real_00053", "history": [], "query": "广州--揭阳5000近期", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "real_00054", "history": [], "query": "广州--漳州/福清5000", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "real_00055", "history": [], "query": "天津--靖江5000近期", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "real_00056", "history": [], "query": "江门--三亚5000近期", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "real_00059", "history": [], "query": "台儿庄—颖上太和镇，抛江石，1000吨左右单机，需要单机数条，宽9米左右", "label": {"intent": "FIND_SHIP", "slots": {"cargo_name": "砂石", "cargo_weight": "1000吨"}, "need_clarify": false}}
+{"id": "real_00060", "history": [], "query": "湖口、彭泽——淮安红日港，需1600吨左右，石子，随到随装", "label": {"intent": "FIND_SHIP", "slots": {"port_name": "湖口", "cargo_name": "石子", "cargo_weight": "1600吨"}, "need_clarify": false}}
+{"id": "real_00063", "history": [], "query": "鄂州—扬中珩群，沙子，8000-9000吨单机", "label": {"intent": "FIND_SHIP", "slots": {"cargo_weight": "9000吨"}, "need_clarify": false}}
+{"id": "real_00066", "history": [], "query": "重庆珞璜，到，江西星子，煤，15,000吨左右。船到就装，有定金，装卸快，", "label": {"intent": "FIND_SHIP", "slots": {"cargo_weight": "000吨"}, "need_clarify": false}}
+{"id": "real_00067", "history": [], "query": "蒙城双涧，到，海门，煤矸，船到就装，有定金，装卸快，", "label": {"intent": "FIND_SHIP", "slots": {"port_name": "蒙城"}, "need_clarify": false}}
+{"id": "real_00068", "history": [], "query": "铜陵，到，湘潭，煤泥，2000吨左右，月底装，有定金，装卸快，", "label": {"intent": "FIND_SHIP", "slots": {"port_name": "铜陵", "cargo_name": "煤炭", "cargo_weight": "2000吨", "date_time": "月底"}, "need_clarify": false}}
+{"id": "real_00069", "history": [], "query": "颍上闸上,到，东台，煤研石，长期货源，船到就装，有定金，装卸快，", "label": {"intent": "FIND_SHIP", "slots": {"port_name": "颍上"}, "need_clarify": false}}
+{"id": "real_00070", "history": [], "query": "涡阳，到，海门港闸内，煤矸，船到就装，有定金，装卸快，", "label": {"intent": "FIND_SHIP", "slots": {"port_name": "涡阳"}, "need_clarify": false}}
+{"id": "real_00074", "history": [], "query": "我这票货南京装重庆卸，帮我匹配合适的船", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "real_00077", "history": [], "query": "张家港到重庆有没有1万吨的船", "label": {"intent": "FIND_SHIP", "slots": {"port_name": "张家港", "cargo_weight": "1万", "route_from": "张家港", "route_to": "重庆有没有"}, "need_clarify": false}}
+{"id": "real_00082", "history": [], "query": "重庆到南京有回程船吗，钢材3000吨", "label": {"intent": "FIND_SHIP", "slots": {"cargo_name": "钢材", "cargo_weight": "3000吨", "route_from": "重庆", "route_to": "南京有回程船"}, "need_clarify": false}}
+{"id": "real_00083", "history": [], "query": "南京到武汉有没有3000-4000吨的自卸船", "label": {"intent": "FIND_SHIP", "slots": {"cargo_weight": "4000吨", "route_from": "南京", "route_to": "武汉有没有"}, "need_clarify": false}}
+{"id": "real_00087", "history": [], "query": "查下南京到芜湖有没有3000吨上下的船", "label": {"intent": "FIND_SHIP", "slots": {"port_name": "芜湖", "cargo_weight": "3000吨"}, "need_clarify": false}}
+{"id": "real_00088", "history": [], "query": "帮我找从南京到武汉的船，3000吨左右，这周装货", "label": {"intent": "FIND_SHIP", "slots": {"cargo_weight": "3000吨", "date_time": "这周"}, "need_clarify": false}}
+{"id": "real_00090", "history": [], "query": "镇江到重庆煤炭5000吨月底装，有没有合适的船", "label": {"intent": "FIND_SHIP", "slots": {"cargo_name": "煤炭", "cargo_weight": "5000吨", "route_from": "镇江", "date_time": "月底"}, "need_clarify": false}}
+{"id": "real_00091", "history": [], "query": "南京到重庆1万吨船有吗，3月15号装货", "label": {"intent": "FIND_SHIP", "slots": {"cargo_weight": "1万", "route_from": "南京", "route_to": "重庆", "date_time": "3月15号"}, "need_clarify": false}}
+{"id": "real_00093", "history": [], "query": "帮我找一下，黄石到南通，6000吨砂石，明天装的船", "label": {"intent": "FIND_SHIP", "slots": {"port_name": "黄石", "cargo_name": "砂石", "cargo_weight": "6000吨", "route_from": "黄石", "date_time": "明天"}, "need_clarify": false}}
+{"id": "real_00094", "history": [], "query": "南京到无锡玉米1000吨", "label": {"intent": "FIND_SHIP", "slots": {"cargo_name": "玉米", "cargo_weight": "1000吨", "route_from": "南京", "route_to": "无锡玉米"}, "need_clarify": false}}
+{"id": "real_00095", "history": [], "query": "黄冈市武穴码头到南通一德码头6000吨砂石料明天装", "label": {"intent": "FIND_SHIP", "slots": {"port_name": "武穴码头", "cargo_name": "砂石", "cargo_weight": "6000吨", "route_from": "黄冈市武穴码头", "date_time": "明天"}, "need_clarify": false}}
+{"id": "real_00097", "history": [], "query": "南京到南通5000吨砂石料明天装", "label": {"intent": "FIND_SHIP", "slots": {"cargo_name": "砂石", "cargo_weight": "5000吨", "route_from": "南京", "date_time": "明天"}, "need_clarify": false}}
+{"id": "real_00099", "history": [], "query": "百盛锚地至仪征港，砂，3500吨", "label": {"intent": "FIND_SHIP", "slots": {"cargo_weight": "3500吨"}, "need_clarify": false}}
+{"id": "real_00100", "history": [], "query": "从南京到嘉定的600吨的船有哪些啊", "label": {"intent": "FIND_SHIP", "slots": {"port_name": "嘉定", "cargo_weight": "600吨", "route_from": "从南京", "route_to": "嘉定的"}, "need_clarify": false}}
+{"id": "real_00101", "history": [], "query": "从泰周江堰泰州金博通科、京博通科技园到上海宝山区三门路复旦软件园发一车大理石", "label": {"intent": "FIND_SHIP", "slots": {"port_name": "泰州", "cargo_name": "大理石"}, "need_clarify": false}}
+{"id": "real_00102", "history": [], "query": "有没有船舶可以推荐", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "real_00103", "history": [], "query": "我想找芜湖南方水泥有限公司码头至宁波象山台宁码头，需要1000吨左右散装船", "label": {"intent": "FIND_SHIP", "slots": {"port_name": "芜湖", "cargo_name": "水泥", "cargo_weight": "1000吨"}, "need_clarify": false}}
+{"id": "real_00105", "history": [], "query": "南京龙潭附近有哪些船在跑", "label": {"intent": "FIND_SHIP", "slots": {"port_name": "南京龙潭"}, "need_clarify": false}}
+{"id": "real_00108", "history": [], "query": "南京附近运力情况怎么样", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "real_00112", "history": [], "query": "我想看南京港周边的船舶情况", "label": {"intent": "FIND_SHIP", "slots": {"port_name": "南京港"}, "need_clarify": false}}
+{"id": "real_00113", "history": [], "query": "帮我搜搜江北这一片有什么船", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "real_00114", "history": [], "query": "南京江北附近有哪些砂石船", "label": {"intent": "FIND_SHIP", "slots": {"cargo_name": "砂石"}, "need_clarify": false}}
+{"id": "real_00116", "history": [], "query": "南京龙潭附近有3000吨左右的船吗", "label": {"intent": "FIND_SHIP", "slots": {"port_name": "南京龙潭", "cargo_weight": "3000吨"}, "need_clarify": false}}
+{"id": "real_00118", "history": [], "query": "南京附近有没有1万吨级别的船", "label": {"intent": "FIND_SHIP", "slots": {"cargo_weight": "1万"}, "need_clarify": false}}
+{"id": "real_00121", "history": [], "query": "南京附近有没有适合装砂石的船", "label": {"intent": "FIND_SHIP", "slots": {"cargo_name": "砂石"}, "need_clarify": false}}
+{"id": "real_00123", "history": [], "query": "查下南京江北周边有没有集装箱船", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "real_00125", "history": [], "query": "南京龙潭周边砂石船运力怎么样", "label": {"intent": "FIND_SHIP", "slots": {"port_name": "南京龙潭", "cargo_name": "砂石"}, "need_clarify": false}}
+{"id": "real_00129", "history": [], "query": "附近船舶：南京港", "label": {"intent": "FIND_SHIP", "slots": {"port_name": "南京港"}, "need_clarify": false}}
+{"id": "real_00132", "history": [], "query": "小吨同学搜索靖江附近6000吨左右的装煤炭的船", "label": {"intent": "FIND_SHIP", "slots": {"cargo_name": "煤炭", "cargo_weight": "6000吨"}, "need_clarify": false}}
+{"id": "real_00200", "history": [], "query": "识别图中文字", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}}
+{"id": "real_00201", "history": [], "query": "提取图中文字", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}}
+{"id": "real_00133", "history": [], "query": "从武穴到南通，砂石5000吨运价是多少", "label": {"intent": "QUERY_FREIGHT", "slots": {"cargo_name": "砂石", "cargo_weight": "5000吨", "route_from": "从武穴"}, "need_clarify": false}}
+{"id": "real_00134", "history": [], "query": "查询运价：南通到荆州，4000吨进口大豆", "label": {"intent": "QUERY_FREIGHT", "slots": {"cargo_name": "大豆", "cargo_weight": "4000吨", "route_to": "荆州"}, "need_clarify": false}}
+{"id": "real_00135", "history": [], "query": "江阴港至江阴顺永建材，砂石，1000吨，船运费大概是多少", "label": {"intent": "QUERY_FREIGHT", "slots": {"port_name": "江阴港", "cargo_name": "砂石", "cargo_weight": "1000吨"}, "need_clarify": false}}
+{"id": "real_00136", "history": [], "query": "从镇江到樟树3000~4000吨的锂矿大概运费多少钱", "label": {"intent": "QUERY_FREIGHT", "slots": {"cargo_name": "矿石", "cargo_weight": "4000吨", "route_from": "从镇江", "route_to": "樟树"}, "need_clarify": false}}
+{"id": "real_00137", "history": [], "query": "如皋到马鞍山当涂的煤炭10000吨大概多少钱", "label": {"intent": "QUERY_FREIGHT", "slots": {"cargo_name": "煤炭", "cargo_weight": "10000吨", "route_from": "如皋", "route_to": "马鞍山当涂的"}, "need_clarify": false}}
+{"id": "real_00138", "history": [], "query": "帮我查询从如皋港到马鞍山一万吨的煤炭运价", "label": {"intent": "QUERY_FREIGHT", "slots": {"port_name": "如皋港", "cargo_name": "煤炭", "route_from": "我查询从如皋港", "route_to": "马鞍山一万吨"}, "need_clarify": false}}
+{"id": "real_00139", "history": [], "query": "南通发到城陵矶的煤炭现在运价大概在多少钱，1万吨的船左右", "label": {"intent": "QUERY_FREIGHT", "slots": {"cargo_name": "煤炭", "cargo_weight": "1万", "route_to": "城陵矶的煤炭"}, "need_clarify": false}}
+{"id": "real_00140", "history": [], "query": "贵港到珠海斗门港5000吨碎石运费", "label": {"intent": "QUERY_FREIGHT", "slots": {"cargo_name": "砂石", "cargo_weight": "5000吨", "route_from": "贵港", "route_to": "珠海斗门港"}, "need_clarify": false}}
+{"id": "real_00213", "history": [], "query": "运价能优惠吗？", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "real_00215", "history": [], "query": "召集加油站0号柴油多少钱一吨", "label": {"intent": "QUERY_FREIGHT", "slots": {"date_time": "0号"}, "need_clarify": false}}
+{"id": "sample_query_freight_0001", "history": [], "query": "靖江到南京砂石运价", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0002", "history": [], "query": "靖江到上海钢材5000吨运价多少", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0003", "history": [], "query": "现在煤炭运费行情", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0004", "history": [], "query": "3000吨船从南通到上海多少钱", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0005", "history": [], "query": "南京到重庆集装箱3000吨运价多少", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0007", "history": [], "query": "南通到南京砂石运价", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0010", "history": [], "query": "靖江到上海砂石运价", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0012", "history": [], "query": "南通到南通煤炭1万吨运价多少", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0013", "history": [], "query": "南通到南京集装箱1万吨运价多少", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0014", "history": [], "query": "靖江到南通砂石运价", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0015", "history": [], "query": "5000吨船从南通到上海多少钱", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0016", "history": [], "query": "1万吨船从靖江到南通多少钱", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0019", "history": [], "query": "8000吨船从南通到重庆多少钱", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0020", "history": [], "query": "5000吨船从武汉到南京多少钱", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0022", "history": [], "query": "武汉到南京砂石运价", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0024", "history": [], "query": "5000吨船从武汉到南通多少钱", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0025", "history": [], "query": "武汉到南通砂石运价", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0026", "history": [], "query": "南京到南京砂石运价", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0027", "history": [], "query": "武汉到上海砂石运价", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0028", "history": [], "query": "靖江到重庆钢材5000吨运价多少", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0029", "history": [], "query": "5000吨船从南京到南京多少钱", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0030", "history": [], "query": "南通到上海砂石运价", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0031", "history": [], "query": "3000吨船从靖江到南通多少钱", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0033", "history": [], "query": "武汉到南京钢材8000吨运价多少", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0034", "history": [], "query": "南通到上海钢材1万吨运价多少", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0036", "history": [], "query": "南京到南通钢材3000吨运价多少", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0041", "history": [], "query": "5000吨船从南通到重庆多少钱", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0042", "history": [], "query": "南京到南通砂石运价", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0044", "history": [], "query": "南京到南通煤炭3000吨运价多少", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0045", "history": [], "query": "武汉到上海集装箱8000吨运价多少", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0048", "history": [], "query": "8000吨船从南通到上海多少钱", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "sample_query_freight_0050", "history": [], "query": "3000吨船从武汉到南通多少钱", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "exp_00027", "history": [], "query": "APP闪退了3次，什么破软件", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "exp_00028", "history": [], "query": "等了半小时客服没人理", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "exp_00029", "history": [], "query": "能不能加个运单导出功能", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "exp_00030", "history": [], "query": "船期预报不准，经常延误", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "exp_00031", "history": [], "query": "软件经常卡死，打不开运单详情页", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "exp_00032", "history": [], "query": "客服态度太差了，问个问题爱答不理", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "exp_00033", "history": [], "query": "建议增加批量导入运单的功能", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "exp_00034", "history": [], "query": "我的货延误了5天，损失谁负责", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "exp_00035", "history": [], "query": "页面加载太慢了，每次查询要等好久", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "exp_00036", "history": [], "query": "你们这个系统太难用了，功能在哪都找不到", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "exp_00037", "history": [], "query": "提交运单后一直显示待确认，什么时候能审完", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "exp_00038", "history": [], "query": "能不能优化一下搜索功能，现在搜船名总是搜不到", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "exp_00039", "history": [], "query": "天气信息不准确，上次说晴天结果下大雨", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "exp_00040", "history": [], "query": "水位数据更新太慢了，能不能实时一点", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "exp_00041", "history": [], "query": "运价估算不准，实际价格差太多", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "exp_00042", "history": [], "query": "希望能在手机上也能方便地操作", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "exp_00043", "history": [], "query": "登录总是掉线，刚填的信息全没了", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "exp_00044", "history": [], "query": "界面设计太老土了，能不能现代化一点", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "exp_00045", "history": [], "query": "报错提示看不懂，能不能写点人话", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "exp_00046", "history": [], "query": "数据同步有问题，我在PC上发的运单手机上看不到", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "exp_00047", "history": [], "query": "希望可以添加消息推送功能，运单状态变化能通知我", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "exp_00048", "history": [], "query": "你们客服电话打了一上午没人接", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "exp_00049", "history": [], "query": "功能建议：增加运费计算器", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "exp_00050", "history": [], "query": "版本更新后更好用了，但是还有些bug希望修复", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "exp_00051", "history": [], "query": "船员证书快要过期了，系统能不能提前提醒我", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "exp_00052", "history": [], "query": "你们的APP比竞争对手差远了", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "real_00194", "history": [], "query": "有个体验上的小建议：筛选条件能不能记住上次选的港口？", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "real_00195", "history": [], "query": "客服电话打不通", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "real_00196", "history": [], "query": "更新后闪退特别频繁", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "real_00197", "history": [], "query": "投诉查船功能不好用", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "real_00001", "history": [], "query": "我要录一条运单，南京龙潭装，重庆果园港卸，3月10号装货，砂石3000吨，船名长江之星6号，船主张三，电话13812345678", "label": {"intent": "SAVE_ORDER", "slots": {"ship_name": "长江之星6号", "port_name": "重庆果园港", "cargo_name": "砂石", "cargo_weight": "3000吨", "date_time": "3月10号"}, "need_clarify": false}}
+{"id": "real_00002", "history": [], "query": "帮我建个运单：装货南京港，卸货武汉阳逻，货物矿石，数量5000吨，装货日期3月15号", "label": {"intent": "SAVE_ORDER", "slots": {"port_name": "南京港", "cargo_name": "矿石", "cargo_weight": "5000吨", "date_time": "3月15号"}, "need_clarify": false}}
+{"id": "real_00003", "history": [], "query": "录入运单：南京装，重庆卸，月底装货，砂石3200吨，船名江海888", "label": {"intent": "SAVE_ORDER", "slots": {"ship_name": "江海888", "cargo_name": "砂石", "cargo_weight": "3200吨", "date_time": "月底"}, "need_clarify": false}}
+{"id": "real_00004", "history": [], "query": "我报一条运单你帮我录：镇江到重庆，煤炭3000吨，3月末装货", "label": {"intent": "SAVE_ORDER", "slots": {"cargo_name": "煤炭", "cargo_weight": "3000吨", "route_from": "镇江", "route_to": "重庆", "date_time": "3月"}, "need_clarify": false}}
+{"id": "real_00005", "history": [], "query": "新建运单：装货地南京龙潭 卸货地重庆果园港 货物砂石 数量5000t 日期4月初 船名长江之星6号", "label": {"intent": "SAVE_ORDER", "slots": {"ship_name": "长江之星6号", "port_name": "重庆果园港", "cargo_name": "砂石", "date_time": "4月"}, "need_clarify": false}}
+{"id": "real_00006", "history": [], "query": "上传运单信息：南京->武汉 钢材 3000吨 下周装货", "label": {"intent": "SAVE_ORDER", "slots": {"cargo_name": "钢材", "cargo_weight": "3000吨", "date_time": "下周"}, "need_clarify": false}}
+{"id": "real_00007", "history": [], "query": "帮我录一下：南京港装，宜昌卸，水泥2000吨，3月10号装，船主李四，电话13900001111", "label": {"intent": "SAVE_ORDER", "slots": {"port_name": "南京港", "cargo_name": "水泥", "cargo_weight": "2000吨", "date_time": "3月10号"}, "need_clarify": false}}
+{"id": "real_00008", "history": [], "query": "录入运单，南京龙潭到万州，矿石8000吨，月底装货", "label": {"intent": "SAVE_ORDER", "slots": {"port_name": "南京龙潭", "cargo_name": "矿石", "cargo_weight": "8000吨", "route_from": "南京龙潭", "route_to": "万州", "date_time": "月底"}, "need_clarify": false}}
+{"id": "real_00009", "history": [], "query": "新建运单，装货镇江港，卸货重庆果园港，砂石3000吨，装期本周", "label": {"intent": "SAVE_ORDER", "slots": {"port_name": "镇江港", "cargo_name": "砂石", "cargo_weight": "3000吨"}, "need_clarify": false}}
+{"id": "real_00010", "history": [], "query": "这条运单你帮我生成一下：南京到九江，钢材5000吨，3月15号装", "label": {"intent": "SAVE_ORDER", "slots": {"cargo_name": "钢材", "cargo_weight": "5000吨", "route_from": "南京", "route_to": "九江", "date_time": "3月15号"}, "need_clarify": false}}
+{"id": "real_00011", "history": [], "query": "发布运单：南京港到九江港 砂石料1000吨", "label": {"intent": "SAVE_ORDER", "slots": {"port_name": "九江港", "cargo_name": "砂石", "cargo_weight": "1000吨", "route_from": "南京港", "route_to": "九江港"}, "need_clarify": false}}
+{"id": "real_00012", "history": [], "query": "航次录入南京港到上海港砂石料1万吨，5月8号装", "label": {"intent": "SAVE_ORDER", "slots": {"port_name": "南京港", "cargo_name": "砂石", "cargo_weight": "1万", "route_from": "航次录入南京港", "route_to": "上海港砂石料", "date_time": "5月8号"}, "need_clarify": false}}
+{"id": "real_00198", "history": [], "query": "我发一张运单照片你帮我录一下", "label": {"intent": "SAVE_ORDER", "slots": {}, "need_clarify": false}}
+{"id": "real_00177", "history": [], "query": "南京外高桥码头泊位和吃水情况", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {}, "need_clarify": false}}
+{"id": "real_00178", "history": [], "query": "查下南京到镇江这段航道水深", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {}, "need_clarify": false}}
+{"id": "real_00179", "history": [], "query": "南京到镇江通航水深多少", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {"route_from": "南京"}, "need_clarify": false}}
+{"id": "real_00180", "history": [], "query": "镇江到南京现在水位怎么样", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {"route_from": "镇江", "route_to": "南京现在水位"}, "need_clarify": false}}
+{"id": "real_00181", "history": [], "query": "宜昌到万州这段航道水位是不是偏低", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {"route_from": "宜昌", "route_to": "万州这段航道"}, "need_clarify": false}}
+{"id": "real_00182", "history": [], "query": "长江口航道最新水深什么时候更新的", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {}, "need_clarify": false}}
+{"id": "real_00184", "history": [], "query": "安庆到芜湖这一段现在水深多少", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {"port_name": "芜湖", "route_from": "安庆"}, "need_clarify": false}}
+{"id": "real_00185", "history": [], "query": "九江到南通这条线水位情况", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {"route_from": "九江"}, "need_clarify": false}}
+{"id": "real_00186", "history": [], "query": "南京到重庆主航道水位正常不", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {"route_from": "南京"}, "need_clarify": false}}
+{"id": "real_00187", "history": [], "query": "镇江附近通航水深够不够", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {}, "need_clarify": false}}
+{"id": "real_00188", "history": [], "query": "南京龙潭附近航道水位是不是有点低", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {"port_name": "南京龙潭"}, "need_clarify": false}}
+{"id": "real_00189", "history": [], "query": "查下宜昌到重庆这一段的通航水深", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {"route_to": "重庆这一段的"}, "need_clarify": false}}
+{"id": "real_00190", "history": [], "query": "从南京到武汉这段航道水深最近有没有变化", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {"route_from": "从南京", "route_to": "武汉这段航道"}, "need_clarify": false}}
+{"id": "real_00192", "history": [], "query": "南京到武汉这条线最近水位有没有偏低", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {"route_from": "南京"}, "need_clarify": false}}
+{"id": "real_00193", "history": [], "query": "查询水位：城陵矶", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {}, "need_clarify": false}}
+{"id": "real_00159", "history": [], "query": "查下南京港今天的天气", "label": {"intent": "QUERY_WEATHER", "slots": {"port_name": "南京港", "date_time": "今天"}, "need_clarify": false}}
+{"id": "real_00160", "history": [], "query": "南京港今天天气怎么样", "label": {"intent": "QUERY_WEATHER", "slots": {"port_name": "南京港", "date_time": "今天"}, "need_clarify": false}}
+{"id": "real_00161", "history": [], "query": "查下南京港明天的天气预报", "label": {"intent": "QUERY_WEATHER", "slots": {"port_name": "南京港", "date_time": "明天"}, "need_clarify": false}}
+{"id": "real_00162", "history": [], "query": "南京龙潭港区这两天会不会下雨", "label": {"intent": "QUERY_WEATHER", "slots": {"port_name": "南京龙潭"}, "need_clarify": false}}
+{"id": "real_00163", "history": [], "query": "重庆果园港后天风大不大", "label": {"intent": "QUERY_WEATHER", "slots": {"port_name": "重庆果园港", "date_time": "后天"}, "need_clarify": false}}
+{"id": "real_00164", "history": [], "query": "镇江港未来3天天气咋样", "label": {"intent": "QUERY_WEATHER", "slots": {"port_name": "镇江港"}, "need_clarify": false}}
+{"id": "real_00166", "history": [], "query": "宜昌到万州这段航线明天天气怎么样", "label": {"intent": "QUERY_WEATHER", "slots": {"route_from": "宜昌", "route_to": "万州这段航线", "date_time": "明天"}, "need_clarify": false}}
+{"id": "real_00167", "history": [], "query": "长江口今天有没有大风预警", "label": {"intent": "QUERY_WEATHER", "slots": {"date_time": "今天"}, "need_clarify": false}}
+{"id": "real_00168", "history": [], "query": "武汉阳逻港有没有台风预警", "label": {"intent": "QUERY_WEATHER", "slots": {"port_name": "武汉阳逻"}, "need_clarify": false}}
+{"id": "real_00170", "history": [], "query": "上海外高桥明天会不会下雨", "label": {"intent": "QUERY_WEATHER", "slots": {"port_name": "上海外高桥", "date_time": "明天"}, "need_clarify": false}}
+{"id": "real_00172", "history": [], "query": "重庆果园港未来3天有暴雨吗", "label": {"intent": "QUERY_WEATHER", "slots": {"port_name": "重庆果园港"}, "need_clarify": false}}
+{"id": "real_00173", "history": [], "query": "从南京到武汉这条线这两天能见度怎么样", "label": {"intent": "QUERY_WEATHER", "slots": {"route_from": "从南京", "route_to": "武汉这条线这"}, "need_clarify": false}}
+{"id": "real_00174", "history": [], "query": "南京港明天会不会下大雨", "label": {"intent": "QUERY_WEATHER", "slots": {"port_name": "南京港", "date_time": "明天"}, "need_clarify": false}}
+{"id": "real_00175", "history": [], "query": "重庆果园港未来两天天气预报查下", "label": {"intent": "QUERY_WEATHER", "slots": {"port_name": "重庆果园港"}, "need_clarify": false}}
+{"id": "real_00176", "history": [], "query": "查询天气：南京明天天气", "label": {"intent": "QUERY_WEATHER", "slots": {"date_time": "明天"}, "need_clarify": false}}
+{"id": "real_00203", "history": [], "query": "详细介绍一下运吨吨", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "real_00204", "history": [], "query": "详细介绍一下自己", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "real_00205", "history": [], "query": "你能做什么？", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "real_00206", "history": [], "query": "注册需要什么信息？", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "real_00207", "history": [], "query": "怎么注册账号？", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "real_00199", "history": [], "query": "这张磅单信息帮我识别成运单", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}}
+{"id": "real_00202", "history": [], "query": "提取图片中的文字", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}}
+{"id": "real_00141", "history": [], "query": "历史运单查询", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}}
+{"id": "real_00142", "history": [], "query": "查一下历史运单", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}}
+{"id": "real_00143", "history": [], "query": "帮我查一下之前的运单", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}}
+{"id": "real_00144", "history": [], "query": "运单记录帮我查下", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}}
+{"id": "real_00145", "history": [], "query": "看一下以前的运单", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}}
+{"id": "real_00146", "history": [], "query": "查我上次那票货的运单", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}}
+{"id": "real_00147", "history": [], "query": "查下长江之星6号上个月的运单记录", "label": {"intent": "QUERY_ORDER", "slots": {"ship_name": "长江之星6号"}, "need_clarify": false}}
+{"id": "real_00151", "history": [], "query": "看下张三那条船的历史运单记录", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}}
+{"id": "real_00156", "history": [], "query": "看下我这周的所有运单记录", "label": {"intent": "QUERY_ORDER", "slots": {"date_time": "这周"}, "need_clarify": false}}
+{"id": "clarify_001", "history": [{"role": "user", "content": "帮我查一下长江之星6号的位置"}, {"role": "assistant", "content": "已为您查询到船舶：长江之星6号，位于南京龙潭港区附近"}], "query": "那条船现在到哪了", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_002", "history": [{"role": "user", "content": "我想找一条船跑南京到武汉的航线"}, {"role": "assistant", "content": "好的，请问您需要什么类型的船？大概多少吨位？"}], "query": "3000吨左右的", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_003", "history": [], "query": "帮我查一下船", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_004", "history": [], "query": "我那票货到哪了", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": true}}
+{"id": "clarify_005", "history": [], "query": "帮我找一条船", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_006", "history": [], "query": "这条船什么时候到", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_007", "history": [], "query": "有合适的船吗", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_008", "history": [], "query": "帮我查一下船和天气", "label": {"intent": "TALK", "slots": {}, "need_clarify": true}}
+{"id": "clarify_009", "history": [], "query": "查下最近的天气", "label": {"intent": "QUERY_WEATHER", "slots": {}, "need_clarify": true}}
+{"id": "clarify_010", "history": [], "query": "问一下最近的加油站位置", "label": {"intent": "QUERY_OIL_STATION", "slots": {}, "need_clarify": true}}
+{"id": "clarify_011", "history": [{"role": "user", "content": "帮我查一下华航118的位置"}, {"role": "assistant", "content": "华航118目前位于重庆果园港附近"}], "query": "预计还要多久到港", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_012", "history": [], "query": "船到哪了", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_013", "history": [], "query": "帮我预定这艘船", "label": {"intent": "TALK", "slots": {}, "need_clarify": true}}
+{"id": "clarify_014", "history": [], "query": "这条船现在走到哪个航段了", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": true}}
+{"id": "clarify_015", "history": [], "query": "有去重庆的船吗", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_016", "history": [], "query": "问一下这边有没有加油站", "label": {"intent": "QUERY_OIL_STATION", "slots": {}, "need_clarify": true}}
+{"id": "clarify_017", "history": [], "query": "帮我看一下", "label": {"intent": "TALK", "slots": {}, "need_clarify": true}}
+{"id": "clarify_018", "history": [], "query": "能帮我找条船吗", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_019", "history": [], "query": "这条船的详细信息", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "clarify_020", "history": [], "query": "有没有3000吨的船", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_021", "history": [{"role": "user", "content": "我想找一条从南京到武汉的船"}, {"role": "assistant", "content": "好的，请问您需要什么类型的货物运输？"}], "query": "装砂石的", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_023", "history": [], "query": "那个船什么时候到", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_024", "history": [], "query": "我想查一下这条船", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_026", "history": [], "query": "帮我找船", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_027", "history": [], "query": "有没有合适的船", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_028", "history": [], "query": "附近有空船吗", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_029", "history": [], "query": "这票货到哪了，能看实时位置吗", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": true}}
+{"id": "clarify_030", "history": [], "query": "这条船什么时候年检", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "clarify_031", "history": [], "query": "船东联系方式有吗", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "clarify_032", "history": [], "query": "这艘船的证书齐全吗", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "clarify_033", "history": [], "query": "船舶吨位和吃水是多少", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "clarify_034", "history": [], "query": "有船吗", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_035", "history": [], "query": "帮我查查有没有船", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_036", "history": [{"role": "user", "content": "你好"}, {"role": "assistant", "content": "您好，我是运吨吨智能助手，请问有什么可以帮您？"}], "query": "我想查一下船", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_037", "history": [], "query": "帮我找一条船跑这条航线", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_038", "history": [], "query": "这票货的运输进度", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": true}}
+{"id": "clarify_039", "history": [], "query": "船到哪了能看到吗", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_040", "history": [], "query": "有没有到重庆的船", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_041", "history": [], "query": "附近有什么船", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_042", "history": [], "query": "查一下我的货到哪了", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": true}}
+{"id": "clarify_043", "history": [], "query": "那条船的实时位置", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_044", "history": [], "query": "船什么时候到港", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_045", "history": [], "query": "帮我看看有没有合适的船", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_046", "history": [], "query": "有没有加油的地方", "label": {"intent": "QUERY_OIL_STATION", "slots": {}, "need_clarify": true}}
+{"id": "clarify_047", "history": [], "query": "哪里能加油", "label": {"intent": "QUERY_OIL_STATION", "slots": {}, "need_clarify": true}}
+{"id": "clarify_048", "history": [], "query": "附近有加油站吗", "label": {"intent": "QUERY_OIL_STATION", "slots": {}, "need_clarify": true}}
+{"id": "clarify_049", "history": [], "query": "这边有加油站吗", "label": {"intent": "QUERY_OIL_STATION", "slots": {}, "need_clarify": true}}
+{"id": "clarify_051", "history": [], "query": "帮我配一条船", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_052", "history": [], "query": "这艘船的位置", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_053", "history": [], "query": "船在哪", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_054", "history": [], "query": "我那条船到哪了", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_055", "history": [], "query": "有去那边的船吗", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_056", "history": [], "query": "有没有合适的", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_057", "history": [], "query": "查一下我的船", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_058", "history": [], "query": "有没有船能跑这条线", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_059", "history": [], "query": "这边有船吗", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_060", "history": [], "query": "有空的船吗", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_061", "history": [], "query": "船主联系方式", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "clarify_062", "history": [], "query": "船东电话有吗", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "clarify_063", "history": [], "query": "船长联系方式", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "clarify_064", "history": [], "query": "这艘船的基本信息", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "clarify_065", "history": [], "query": "船舶信息有哪些", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "clarify_066", "history": [], "query": "船的资料", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "clarify_067", "history": [], "query": "能帮我看看吗", "label": {"intent": "TALK", "slots": {}, "need_clarify": true}}
+{"id": "clarify_068", "history": [], "query": "帮我找找", "label": {"intent": "TALK", "slots": {}, "need_clarify": true}}
+{"id": "clarify_069", "history": [], "query": "有没有", "label": {"intent": "TALK", "slots": {}, "need_clarify": true}}
+{"id": "clarify_070", "history": [], "query": "能查一下吗", "label": {"intent": "TALK", "slots": {}, "need_clarify": true}}
+{"id": "clarify_071", "history": [], "query": "查查", "label": {"intent": "TALK", "slots": {}, "need_clarify": true}}
+{"id": "clarify_072", "history": [], "query": "帮我看看", "label": {"intent": "TALK", "slots": {}, "need_clarify": true}}
+{"id": "clarify_073", "history": [], "query": "找一下", "label": {"intent": "TALK", "slots": {}, "need_clarify": true}}
+{"id": "clarify_075", "history": [], "query": "有3000吨左右的船吗", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_076", "history": [], "query": "有自卸船吗", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_077", "history": [], "query": "单机有吗", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_078", "history": [], "query": "需要一条船", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_079", "history": [], "query": "有船可以跑吗", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_080", "history": [], "query": "有没有在这边的船", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_081", "history": [], "query": "这票货什么时候能到", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": true}}
+{"id": "clarify_082", "history": [], "query": "货物到哪了", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": true}}
+{"id": "clarify_083", "history": [], "query": "我的货走到哪了", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": true}}
+{"id": "clarify_084", "history": [], "query": "货船运输进度", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": true}}
+{"id": "clarify_085", "history": [], "query": "能看到船到哪了吗", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_086", "history": [], "query": "船的位置能查到吗", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_087", "history": [], "query": "能查到那条船吗", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_089", "history": [], "query": "能走这条线吗", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_090", "history": [], "query": "这边有去重庆的船吗", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_091", "history": [], "query": "附近有加油站吗能加0号柴油", "label": {"intent": "QUERY_OIL_STATION", "slots": {}, "need_clarify": true}}
+{"id": "clarify_092", "history": [], "query": "哪里有加油站", "label": {"intent": "QUERY_OIL_STATION", "slots": {}, "need_clarify": true}}
+{"id": "clarify_093", "history": [], "query": "有加油的地方吗", "label": {"intent": "QUERY_OIL_STATION", "slots": {}, "need_clarify": true}}
+{"id": "clarify_094", "history": [], "query": "附近哪里能加油", "label": {"intent": "QUERY_OIL_STATION", "slots": {}, "need_clarify": true}}
+{"id": "clarify_095", "history": [], "query": "最近加油站在哪", "label": {"intent": "QUERY_OIL_STATION", "slots": {}, "need_clarify": true}}
+{"id": "clarify_096", "history": [], "query": "这条船年检过期了吗", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "clarify_097", "history": [], "query": "船的证书有效期", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "clarify_098", "history": [], "query": "船东是谁", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "clarify_099", "history": [], "query": "船舶经营人", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "clarify_100", "history": [], "query": "这艘船跑什么航线", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "clarify_101", "history": [], "query": "有4000-5000吨的船吗", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_102", "history": [], "query": "有2000吨左右的单机吗", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_103", "history": [], "query": "有没有舱位", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_104", "history": [], "query": "有去南京的船吗", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_105", "history": [], "query": "有从这边走的船吗", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_106", "history": [], "query": "帮我看看有没有", "label": {"intent": "TALK", "slots": {}, "need_clarify": true}}
+{"id": "clarify_107", "history": [], "query": "查一下有没有合适的", "label": {"intent": "TALK", "slots": {}, "need_clarify": true}}
+{"id": "clarify_109", "history": [], "query": "能帮个忙吗", "label": {"intent": "TALK", "slots": {}, "need_clarify": true}}
+{"id": "clarify_110", "history": [], "query": "查不到", "label": {"intent": "TALK", "slots": {}, "need_clarify": true}}
+{"id": "clarify_111", "history": [], "query": "你说的船", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_112", "history": [], "query": "那条船的位置", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_113", "history": [], "query": "上一条船", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_114", "history": [], "query": "这票货", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": true}}
+{"id": "clarify_115", "history": [], "query": "我那票货", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": true}}
+{"id": "clarify_116", "history": [], "query": "上次那票货", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": true}}
+{"id": "clarify_117", "history": [], "query": "那票运单", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": true}}
+{"id": "clarify_118", "history": [], "query": "查我那个运单", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": true}}
+{"id": "clarify_119", "history": [], "query": "有没有去武汉的船", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_120", "history": [], "query": "有到上海的船吗", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_121", "history": [], "query": "有回程船吗", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_122", "history": [], "query": "有没有从重庆到南京的船", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_123", "history": [], "query": "有合适的船介绍吗", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_125", "history": [], "query": "有没有船", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_126", "history": [], "query": "附近有吗", "label": {"intent": "QUERY_OIL_STATION", "slots": {}, "need_clarify": true}}
+{"id": "clarify_127", "history": [], "query": "这边能加油吗", "label": {"intent": "QUERY_OIL_STATION", "slots": {}, "need_clarify": true}}
+{"id": "clarify_128", "history": [], "query": "有加油站吗在这附近", "label": {"intent": "QUERY_OIL_STATION", "slots": {}, "need_clarify": true}}
+{"id": "clarify_129", "history": [], "query": "哪有加油站", "label": {"intent": "QUERY_OIL_STATION", "slots": {}, "need_clarify": true}}
+{"id": "clarify_130", "history": [], "query": "加油站远吗", "label": {"intent": "QUERY_OIL_STATION", "slots": {}, "need_clarify": true}}
+{"id": "clarify_131", "history": [], "query": "0号柴油价格", "label": {"intent": "QUERY_OIL_STATION", "slots": {}, "need_clarify": true}}
+{"id": "clarify_132", "history": [], "query": "油价多少", "label": {"intent": "QUERY_OIL_STATION", "slots": {}, "need_clarify": true}}
+{"id": "clarify_133", "history": [], "query": "今天天气怎么样", "label": {"intent": "QUERY_WEATHER", "slots": {}, "need_clarify": true}}
+{"id": "clarify_134", "history": [], "query": "明天天气好吗", "label": {"intent": "QUERY_WEATHER", "slots": {}, "need_clarify": true}}
+{"id": "clarify_135", "history": [], "query": "最近天气如何", "label": {"intent": "QUERY_WEATHER", "slots": {}, "need_clarify": true}}
+{"id": "clarify_136", "history": [], "query": "能见度怎么样", "label": {"intent": "QUERY_WEATHER", "slots": {}, "need_clarify": true}}
+{"id": "clarify_137", "history": [], "query": "会不会下雨", "label": {"intent": "QUERY_WEATHER", "slots": {}, "need_clarify": true}}
+{"id": "clarify_138", "history": [], "query": "有没有雾", "label": {"intent": "QUERY_WEATHER", "slots": {}, "need_clarify": true}}
+{"id": "clarify_139", "history": [], "query": "风向风力如何", "label": {"intent": "QUERY_WEATHER", "slots": {}, "need_clarify": true}}
+{"id": "clarify_140", "history": [], "query": "气温多少", "label": {"intent": "QUERY_WEATHER", "slots": {}, "need_clarify": true}}
+{"id": "clarify_141", "history": [], "query": "水位怎么样", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {}, "need_clarify": true}}
+{"id": "clarify_142", "history": [], "query": "水深够吗", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {}, "need_clarify": true}}
+{"id": "clarify_143", "history": [], "query": "航道水深多少", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {}, "need_clarify": true}}
+{"id": "clarify_144", "history": [], "query": "能通过吗", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {}, "need_clarify": true}}
+{"id": "clarify_145", "history": [], "query": "吃水深度够吗", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {}, "need_clarify": true}}
+{"id": "clarify_146", "history": [], "query": "船闸等待时间", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_147", "history": [], "query": "船闸堵吗", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_148", "history": [], "query": "有多少船在等", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_149", "history": [], "query": "过闸要多久", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_150", "history": [], "query": "船闸排队情况", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_151", "history": [{"role": "user", "content": "我想找一条船"}, {"role": "assistant", "content": "请问您需要什么航线和吨位的船？"}], "query": "南京到武汉的，3000吨左右", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_152", "history": [{"role": "user", "content": "我的货到哪了"}, {"role": "assistant", "content": "请问您说的是哪票货？"}], "query": "就是那票砂石", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": true}}
+{"id": "clarify_153", "history": [{"role": "user", "content": "帮我查一下船"}, {"role": "assistant", "content": "请问您想查哪条船？"}], "query": "就是上次那条", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_154", "history": [], "query": "运费多少", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_155", "history": [], "query": "运价怎么样", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_156", "history": [], "query": "价格多少", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_157", "history": [], "query": "贵不贵", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_158", "history": [], "query": "行情怎么样", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_159", "history": [], "query": "现在煤炭运费", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_160", "history": [], "query": "沙子运价", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_161", "history": [], "query": "钢材多少钱一吨", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_162", "history": [], "query": "矿石运费", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_163", "history": [], "query": "水泥运价多少", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_164", "history": [], "query": "一万吨多少钱", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_165", "history": [], "query": "有优惠吗", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_166", "history": [], "query": "最近运价涨了吗", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_167", "history": [], "query": "运费涨了还是跌了", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_168", "history": [], "query": "市场行情", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_169", "history": [], "query": "最新运价", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_170", "history": [], "query": "现在什么价", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_171", "history": [], "query": "查一下价格", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_172", "history": [], "query": "帮我算一下", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_173", "history": [], "query": "大概多少钱", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_174", "history": [], "query": "能便宜点吗", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_175", "history": [], "query": "有没有折扣", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_176", "history": [], "query": "长期合作价格", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_177", "history": [], "query": "包船多少钱", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_178", "history": [], "query": "按吨算多少钱", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_179", "history": [], "query": "一个航次多少", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_180", "history": [], "query": "从南京到武汉", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_181", "history": [], "query": "到重庆多少钱", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_182", "history": [], "query": "南通到上海", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_183", "history": [], "query": "靖江到上海运价", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": true}}
+{"id": "clarify_184", "history": [], "query": "重庆到南京有回程船吗", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_185", "history": [], "query": "有回程货吗", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_186", "history": [], "query": "去的时候装的什么", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": true}}
+{"id": "clarify_187", "history": [], "query": "回程装什么货", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "clarify_188", "history": [], "query": "装货重量", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": true}}
+{"id": "clarify_189", "history": [], "query": "这条船跑什么航线", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "clarify_190", "history": [], "query": "船型是什么", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "clarify_191", "history": [], "query": "船多少吨位", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "clarify_192", "history": [], "query": "船宽多少", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "clarify_193", "history": [], "query": "船长老多少", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "clarify_194", "history": [], "query": "船速多少节", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "clarify_195", "history": [], "query": "船什么时候造的", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "clarify_196", "history": [], "query": "船舶种类", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "clarify_197", "history": [], "query": "有证书吗", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "clarify_198", "history": [], "query": "这船靠谱吗", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "clarify_199", "history": [], "query": "船东信誉如何", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "clarify_200", "history": [], "query": "安全记录好吗", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "longtail_001", "history": [], "query": "怎么注册账号", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_002", "history": [], "query": "注册需要什么材料", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_003", "history": [], "query": "如何认证船东", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_004", "history": [], "query": "船东认证流程是什么", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_005", "history": [], "query": "货主怎么注册", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_006", "history": [], "query": "企业入驻需要什么条件", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_007", "history": [], "query": "个人可以注册吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_008", "history": [], "query": "注册要收费吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_009", "history": [], "query": "会员有哪些权益", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_010", "history": [], "query": "VIP会员有什么用", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_011", "history": [], "query": "怎么升级会员", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_012", "history": [], "query": "会员收费标准", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_013", "history": [], "query": "年费多少", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_014", "history": [], "query": "怎么充值", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_015", "history": [], "query": "余额怎么提现", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_016", "history": [], "query": "支付方式有哪些", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_017", "history": [], "query": "可以用微信支付吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_018", "history": [], "query": "支持支付宝吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_019", "history": [], "query": "对公账户怎么转账", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_020", "history": [], "query": "发票怎么申请", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_021", "history": [], "query": "增票税率多少", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_022", "history": [], "query": "合同怎么下载", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_023", "history": [], "query": "电子合同有效吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_024", "history": [], "query": "怎么签电子合同", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_025", "history": [], "query": "订单确认流程是什么", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_026", "history": [], "query": "派船流程怎么走", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_027", "history": [], "query": "装货前要准备什么", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_028", "history": [], "query": "单据有哪些", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_029", "history": [], "query": "运单模板在哪下载", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_030", "history": [], "query": "怎么打印运单", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_031", "history": [], "query": "安全法规有哪些", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_032", "history": [], "query": "超载怎么处理", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_033", "history": [], "query": "违规处罚标准", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_034", "history": [], "query": "什么货物不能运", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_035", "history": [], "query": "危险品怎么运输", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_036", "history": [], "query": "保险怎么买", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_037", "history": [], "query": "货物保险多少钱", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_038", "history": [], "query": "出事怎么理赔", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_039", "history": [], "query": "理赔流程是什么", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_040", "history": [], "query": "最高赔多少", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_041", "history": [], "query": "船翻了货丢了赔吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_042", "history": [], "query": "详细介绍下运吨吨", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_043", "history": [], "query": "运吨吨是什么", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_044", "history": [], "query": "平台靠谱吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_045", "history": [], "query": "有哪些服务", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_046", "history": [], "query": "怎么使用", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_047", "history": [], "query": "功能在哪找", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_048", "history": [], "query": "新手教程在哪", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_049", "history": [], "query": "视频教程有吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_050", "history": [], "query": "客服电话多少", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_051", "history": [], "query": "工作时间几点到几点", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_052", "history": [], "query": "晚上有人吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_053", "history": [], "query": "投诉电话", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_054", "history": [], "query": "问题反馈渠道", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_056", "history": [], "query": "帮你找船怎么收费", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_057", "history": [], "query": "中介费多少", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_058", "history": [], "query": "服务费怎么算", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_059", "history": [], "query": "佣金比例", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_060", "history": [], "query": "成交后收费吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_061", "history": [], "query": "为什么搜不到船", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_062", "history": [], "query": "信息不准确怎么反馈", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_063", "history": [], "query": "数据多久更新一次", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_064", "history": [], "query": "船舶位置实时吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_065", "history": [], "query": "AIS定位是什么", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_066", "history": [], "query": "为什么位置有延迟", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_067", "history": [], "query": "船期预报怎么做的", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_068", "history": [], "query": "天气预报准吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_069", "history": [], "query": "水位数据从哪来的", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_070", "history": [], "query": "能查到其他平台吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_071", "history": [], "query": "怎么查询其他平台的船", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_072", "history": [], "query": "数据能导出来吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_073", "history": [], "query": "API接口开放吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_074", "history": [], "query": "接口怎么调用", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_075", "history": [], "query": "技术支持有吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_076", "history": [], "query": "技术对接找谁", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_077", "history": [], "query": "批量操作怎么弄", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_078", "history": [], "query": "可以批量导入吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_079", "history": [], "query": "Excel模板有吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_080", "history": [], "query": "系统对接你们吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "longtail_081", "history": [], "query": "江海888现在过安庆了吗", "label": {"intent": "DISPATCH_MONITOR", "slots": {"ship_name": "江海888"}, "need_clarify": false}}
+{"id": "longtail_082", "history": [], "query": "苏货运01今天能到重庆吗", "label": {"intent": "DISPATCH_MONITOR", "slots": {"ship_name": "苏货运01"}, "need_clarify": false}}
+{"id": "longtail_083", "history": [], "query": "这票货什么时候到", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}}
+{"id": "longtail_084", "history": [], "query": "货物运输进度", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}}
+{"id": "longtail_085", "history": [], "query": "船到哪了能看到实时位置吗", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}}
+{"id": "longtail_086", "history": [], "query": "预计到达时间", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}}
+{"id": "longtail_087", "history": [], "query": "延误会通知吗", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}}
+{"id": "longtail_088", "history": [], "query": "货到哪了帮我看下", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}}
+{"id": "longtail_089", "history": [], "query": "我的货在哪条船上", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}}
+{"id": "longtail_090", "history": [], "query": "船舶跟踪服务", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}}
+{"id": "longtail_091", "history": [], "query": "可以实时看船在哪吗", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}}
+{"id": "longtail_092", "history": [], "query": "有没有延迟", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}}
+{"id": "longtail_093", "history": [], "query": "航行轨迹能查吗", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}}
+{"id": "longtail_094", "history": [], "query": "船走了多久了", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}}
+{"id": "longtail_095", "history": [], "query": "离目的港还有多远", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}}
+{"id": "longtail_096", "history": [], "query": "过船闸了吗", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}}
+{"id": "longtail_097", "history": [], "query": "现在到哪个位置了", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}}
+{"id": "longtail_098", "history": [], "query": "位置更新频率", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}}
+{"id": "longtail_099", "history": [], "query": "能看地图吗", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}}
+{"id": "longtail_100", "history": [], "query": "到港提醒怎么设置", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}}
+{"id": "longtail_101", "history": [], "query": "帮我识别这张单据", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}}
+{"id": "longtail_102", "history": [], "query": "上传图片识别内容", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}}
+{"id": "longtail_103", "history": [], "query": "扫描件能识别吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}}
+{"id": "longtail_104", "history": [], "query": "拍照识别运单", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}}
+{"id": "longtail_105", "history": [], "query": "把照片转成文字", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}}
+{"id": "longtail_106", "history": [], "query": "单据OCR识别", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}}
+{"id": "longtail_107", "history": [], "query": "图片转运单", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}}
+{"id": "longtail_108", "history": [], "query": "磅单识别录入", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}}
+{"id": "longtail_110", "history": [], "query": "帮我把单子录进去", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}}
+{"id": "longtail_111", "history": [], "query": "华航118船舶档案", "label": {"intent": "QUERY_SHIP_INFO", "slots": {"ship_name": "华航118"}, "need_clarify": false}}
+{"id": "longtail_112", "history": [], "query": "皖航339船长联系方式", "label": {"intent": "QUERY_SHIP_INFO", "slots": {"ship_name": "皖航339"}, "need_clarify": false}}
+{"id": "longtail_113", "history": [], "query": "俞垛79证书有效期", "label": {"intent": "QUERY_SHIP_INFO", "slots": {"ship_name": "俞垛79"}, "need_clarify": false}}
+{"id": "longtail_114", "history": [], "query": "苏货运01船舶信息", "label": {"intent": "QUERY_SHIP_INFO", "slots": {"ship_name": "苏货运01"}, "need_clarify": false}}
+{"id": "longtail_115", "history": [], "query": "船舶吨位多少", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}}
+{"id": "longtail_116", "history": [], "query": "船长老多长", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}}
+{"id": "longtail_117", "history": [], "query": "船舶类型是什么", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}}
+{"id": "longtail_118", "history": [], "query": "船东是谁联系电话", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}}
+{"id": "longtail_119", "history": [], "query": "船舶证书齐全吗", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}}
+{"id": "longtail_120", "history": [], "query": "年检什么时候到期", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}}
+{"id": "longtail_121", "history": [], "query": "适航证有效期", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}}
+{"id": "longtail_122", "history": [], "query": "船舶国籍证书", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}}
+{"id": "longtail_123", "history": [], "query": "营运证有吗", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}}
+{"id": "longtail_124", "history": [], "query": "船上有几个人", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}}
+{"id": "longtail_125", "history": [], "query": "船员配置", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}}
+{"id": "longtail_126", "history": [], "query": "船东公司名称", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}}
+{"id": "longtail_127", "history": [], "query": "管理公司", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}}
+{"id": "longtail_128", "history": [], "query": "船舶造价多少", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}}
+{"id": "longtail_129", "history": [], "query": "什么时候造的船", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}}
+{"id": "longtail_130", "history": [], "query": "船体材质", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}}

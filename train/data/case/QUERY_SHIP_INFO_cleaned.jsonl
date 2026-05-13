@@ -1,0 +1,50 @@
+{"id": "shipinfo_001", "history": [], "query": "查一下华航118的船舶证书有效期", "label": {"intent": "QUERY_SHIP_INFO", "slots": {"ship_name": "华航118"}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_002", "history": [], "query": "皖航339船东联系电话有吗", "label": {"intent": "QUERY_SHIP_INFO", "slots": {"ship_name": "皖航339"}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_003", "history": [], "query": "俞垛79的船舶国籍证书在哪查", "label": {"intent": "QUERY_SHIP_INFO", "slots": {"ship_name": "俞垛79"}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_004", "history": [], "query": "船长联系方式怎么获取", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_005", "history": [], "query": "船舶吨位是多少吨的", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_006", "history": [], "query": "船长老多长", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_007", "history": [], "query": "苏货运01船舶类型是什么", "label": {"intent": "QUERY_SHIP_INFO", "slots": {"ship_name": "苏货运01"}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_008", "history": [], "query": "船舶证书都全吗，有没有过期", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_009", "history": [], "query": "营运证什么时候到期", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_010", "history": [], "query": "适航证书有效期多久", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_011", "history": [], "query": "年检什么时候到期", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_012", "history": [], "query": "船上有几个船员", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_013", "history": [], "query": "船员配置标准是什么", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_014", "history": [], "query": "船东公司名称是什么", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_015", "history": [], "query": "管理公司是哪家", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_016", "history": [], "query": "船舶造价多少", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_017", "history": [], "query": "什么时候造的船", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_018", "history": [], "query": "船体材质是钢制还是木制", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_019", "history": [], "query": "船舶主机功率多少千瓦", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_020", "history": [], "query": "船型尺寸长宽多少", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_021", "history": [{"role": "user", "content": "帮我查下这条船的信息"}, {"role": "assistant", "content": "请提供船名。"}], "query": "华航118，船东是谁", "label": {"intent": "QUERY_SHIP_INFO", "slots": {"ship_name": "华航118"}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_022", "history": [{"role": "user", "content": "这条船靠不靠谱"}, {"role": "assistant", "content": "您想了解船舶哪方面的信息？"}], "query": "证书齐全吗，有效期到什么时候", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_023", "history": [{"role": "user", "content": "想租这条船"}, {"role": "assistant", "content": "请提供船名，我帮您查询船舶信息。"}], "query": "皖航339，吨位多大，能装多少货", "label": {"intent": "QUERY_SHIP_INFO", "slots": {"ship_name": "皖航339"}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_024", "history": [{"role": "user", "content": "船长联系不上"}, {"role": "assistant", "content": "请问您需要查询哪条船的船长联系方式？"}], "query": "就是昨天那票货那条，苏货运01", "label": {"intent": "QUERY_SHIP_INFO", "slots": {"ship_name": "苏货运01"}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_025", "history": [{"role": "user", "content": "想看看船舶档案"}, {"role": "assistant", "content": "请问您要查询哪条船的档案？"}], "query": "俞垛79，帮我查下证书和船东信息", "label": {"intent": "QUERY_SHIP_INFO", "slots": {"ship_name": "俞垛79"}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_026", "history": [], "query": "船舶档案包括哪些信息", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_027", "history": [], "query": "船舶证书编号能查到吗", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_028", "history": [], "query": "船籍港是哪的", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_029", "history": [], "query": "船舶登记证书在哪办", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_030", "history": [], "query": "能查到我名下所有船吗", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_031", "history": [], "query": "船舶过户怎么办理", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_032", "history": [], "query": "报废船舶怎么处理", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_033", "history": [], "query": "船舶抵押需要什么手续", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_034", "history": [], "query": "保险在哪家保险公司买", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_035", "history": [], "query": "船舶检验证书由谁颁发", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_036", "history": [], "query": "内河船舶证书和海船证书一样吗", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_037", "history": [], "query": "这条船有没有被抵押或查封", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_038", "history": [], "query": "船舶所有权证书副本能补办吗", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_039", "history": [], "query": "新版船舶证书和老版有什么区别", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_040", "history": [], "query": "船舶安检有效期多久", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_041", "history": [], "query": "船舶油料证书有吗", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_042", "history": [], "query": "防止污染证书什么时候办", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_043", "history": [], "query": "船舶船员证书有效期多久", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_044", "history": [], "query": "适任证书 Renew需要什么条件", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_045", "history": [], "query": "这条船有没有安全事故记录", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_046", "history": [], "query": "船舶违规处罚过几次", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_047", "history": [], "query": "船东信用评级在哪查", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_048", "history": [], "query": "这条船历史合作过几次", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_049", "history": [], "query": "有没有违规记录能查出来吗", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}
+{"id": "shipinfo_050", "history": [], "query": "船舶估值为多少", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": false}, "metadata": {"section": "船舶档案"}}

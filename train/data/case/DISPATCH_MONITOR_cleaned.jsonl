@@ -1,0 +1,50 @@
+{"id": "dispatch_001", "history": [], "query": "帮我查下华航118现在到哪了，预计几点到南京港", "label": {"intent": "DISPATCH_MONITOR", "slots": {"ship_name": "华航118", "port_name": "南京港"}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_002", "history": [], "query": "这票货走到哪了，能看到实时位置吗", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": true}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_003", "history": [], "query": "苏货运01今天能到重庆果园港吗", "label": {"intent": "DISPATCH_MONITOR", "slots": {"ship_name": "苏货运01", "port_name": "重庆果园港"}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_004", "history": [], "query": "货物运输进度怎么查看", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_005", "history": [], "query": "那条船过安庆船闸了吗", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": true}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_006", "history": [], "query": "离目的港还有多远", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_007", "history": [], "query": "船到哪了，给我发个位置截图", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_008", "history": [], "query": "预计到达时间怎么查", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_009", "history": [], "query": "我的货在条船上，想看航行轨迹", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_010", "history": [], "query": "有没有延迟通知服务", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_011", "history": [], "query": "到港提醒怎么设置", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_012", "history": [], "query": "为什么位置更新这么慢，是不是坏了", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_013", "history": [], "query": "现在在哪个航段了", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_014", "history": [], "query": "能看地图上的实时位置吗", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_015", "history": [], "query": "船走了一天一夜了，怎么还没到", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_016", "history": [], "query": "过船闸排队要多久", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_017", "history": [], "query": "当前位置在哪，帮我截个图", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_018", "history": [], "query": "船现在在哪个水域", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_019", "history": [], "query": "我的货今天能装船吗，船到哪了", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_020", "history": [], "query": "延误会提前通知吗", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_021", "history": [{"role": "user", "content": "我的货到哪了"}, {"role": "assistant", "content": "请提供运单号或船名，我帮您查询。"}], "query": "是华航118，帮我看看到哪了", "label": {"intent": "DISPATCH_MONITOR", "slots": {"ship_name": "华航118"}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_022", "history": [{"role": "user", "content": "查下运输进度"}, {"role": "assistant", "content": "船名是什么？我帮您跟踪。"}], "query": "苏货运01，昨天从镇江发的", "label": {"intent": "DISPATCH_MONITOR", "slots": {"ship_name": "苏货运01", "route_from": "镇江"}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_023", "history": [{"role": "user", "content": "帮我看看船到哪了"}, {"role": "assistant", "content": "请问您说的是哪条船？"}], "query": "就是上周那条，砂石的，名字我忘了", "label": {"intent": "DISPATCH_MONITOR", "slots": {"cargo_name": "砂石"}, "need_clarify": true}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_024", "history": [{"role": "user", "content": "货物什么时候能到"}, {"role": "assistant", "content": "请提供船名或运单号。"}], "query": "船名叫江海888，货是矿石", "label": {"intent": "DISPATCH_MONITOR", "slots": {"ship_name": "江海888", "cargo_name": "矿石"}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_025", "history": [{"role": "user", "content": "到港了吗"}, {"role": "assistant", "content": "请问您查询的是哪票货？"}], "query": "就是那票砂石，在长江之星6号上", "label": {"intent": "DISPATCH_MONITOR", "slots": {"ship_name": "长江之星6号", "cargo_name": "砂石"}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_026", "history": [], "query": "船现在过南京了吗", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_027", "history": [], "query": "实时位置更新频率多少", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_028", "history": [], "query": "怎么查看船舶跟踪记录", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_029", "history": [], "query": "AIS定位和实际位置有误差吗", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_030", "history": [], "query": "信号不好的时候位置准不准", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_031", "history": [], "query": "今晚能到港吗", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_032", "history": [], "query": "明天早上能到吗", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_033", "history": [], "query": "能见度不好会影响船期吗", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_034", "history": [], "query": "台风天船会停航吗", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_035", "history": [], "query": "船误点了多久", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_036", "history": [], "query": "水位低会影响航行吗", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_037", "history": [], "query": "为什么船停了几个小时不动", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_038", "history": [], "query": "抛锚了还是在等闸", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_039", "history": [], "query": "什么时候开船", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_040", "history": [], "query": "装货完成了吗", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_041", "history": [], "query": "卸货进度怎么样了", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_042", "history": [], "query": "能见度不够船能开吗", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_043", "history": [], "query": "船在武汉阳逻港等了多久了", "label": {"intent": "DISPATCH_MONITOR", "slots": {"port_name": "武汉阳逻港"}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_044", "history": [], "query": "过三峡船闸要排队多久", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_045", "history": [], "query": "航行轨迹能保存多久", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_046", "history": [], "query": "怎么查看历史轨迹", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_047", "history": [], "query": "船舶跟踪功能在哪找", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_048", "history": [], "query": "能同时跟踪多条船吗", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_049", "history": [], "query": "推送提醒是实时的吗", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}
+{"id": "dispatch_050", "history": [], "query": "手机能收到到港通知吗", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}, "metadata": {"section": "在途监控"}}

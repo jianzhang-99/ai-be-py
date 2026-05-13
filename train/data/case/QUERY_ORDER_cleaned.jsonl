@@ -1,0 +1,50 @@
+{"id": "order_001", "history": [], "query": "查一下我上个月的运单记录", "label": {"intent": "QUERY_ORDER", "slots": {"date_time": "上个月"}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_002", "history": [], "query": "最近三个月南京到重庆的砂石运单有哪些", "label": {"intent": "QUERY_ORDER", "slots": {"cargo_name": "砂石", "route_from": "南京", "route_to": "重庆", "date_time": "三个月"}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_003", "history": [], "query": "帮我查下跟长江之星6号相关的历史运单", "label": {"intent": "QUERY_ORDER", "slots": {"ship_name": "长江之星6号"}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_004", "history": [], "query": "上周装货的那些运单都发我看下", "label": {"intent": "QUERY_ORDER", "slots": {"date_time": "上周"}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_005", "history": [], "query": "我想查询去年全年运单汇总", "label": {"intent": "QUERY_ORDER", "slots": {"date_time": "去年全年"}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_006", "history": [], "query": "这个季度完成了多少票货，运量多少", "label": {"intent": "QUERY_ORDER", "slots": {"date_time": "这个季度"}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_007", "history": [], "query": "查一下我的历史运单里有几票是去重庆的", "label": {"intent": "QUERY_ORDER", "slots": {"route_to": "重庆"}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_008", "history": [], "query": "张三这个月发了几条船", "label": {"intent": "QUERY_ORDER", "slots": {"date_time": "这个月"}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_009", "history": [], "query": "去年12月在南京港装的矿石运单", "label": {"intent": "QUERY_ORDER", "slots": {"port_name": "南京港", "cargo_name": "矿石", "date_time": "去年12月"}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_010", "history": [], "query": "我这批货的运单号忘记了怎么查", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_011", "history": [], "query": "3月份从镇江发往武汉的煤炭运单有哪些", "label": {"intent": "QUERY_ORDER", "slots": {"cargo_name": "煤炭", "route_from": "镇江", "route_to": "武汉", "date_time": "3月"}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_012", "history": [], "query": "帮我看下这周新增的运单", "label": {"intent": "QUERY_ORDER", "slots": {"date_time": "这周"}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_013", "history": [], "query": "历史运单里有没有超过1万吨的大单", "label": {"intent": "QUERY_ORDER", "slots": {"cargo_weight": "1万吨"}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_014", "history": [], "query": "我的运单怎么找不到，是不是还没生成", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_015", "history": [], "query": "查一下和李四合作过的运单记录", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_016", "history": [], "query": "最近半个月有没有从南京龙潭走的船", "label": {"intent": "QUERY_ORDER", "slots": {"port_name": "南京龙潭", "date_time": "半个月"}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_017", "history": [], "query": "运单列表怎么是空的，同步了吗", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_018", "history": [], "query": "帮我导出这个季度的所有运单", "label": {"intent": "QUERY_ORDER", "slots": {"date_time": "这个季度"}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_019", "history": [], "query": "铜精矿的运单有哪几条", "label": {"intent": "QUERY_ORDER", "slots": {"cargo_name": "铜精矿"}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_020", "history": [], "query": "查询历史运单需要什么条件", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_021", "history": [{"role": "user", "content": "查一下我的历史运单"}, {"role": "assistant", "content": "请问您想查询哪个时间段的历史运单？"}], "query": "就是上周那几票，帮我看下进度", "label": {"intent": "QUERY_ORDER", "slots": {"date_time": "上周"}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_022", "history": [{"role": "user", "content": "我的货到哪了"}, {"role": "assistant", "content": "请提供您的运单号或船名，我帮您查询。"}], "query": "运单号不记得了，船名叫江海888", "label": {"intent": "QUERY_ORDER", "slots": {"ship_name": "江海888"}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_023", "history": [{"role": "user", "content": "帮我查下这笔运单"}, {"role": "assistant", "content": "请告诉我要查询的运单的关键信息，如船名、装货港或日期。"}], "query": "是3月份从如皋发的砂石", "label": {"intent": "QUERY_ORDER", "slots": {"cargo_name": "砂石", "route_from": "如皋", "date_time": "3月"}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_024", "history": [{"role": "user", "content": "查下历史运单"}, {"role": "assistant", "content": "请问按什么条件查询？船名、港口还是日期？"}], "query": "按港口查，宜昌港卸货的那些", "label": {"intent": "QUERY_ORDER", "slots": {"route_to": "宜昌港"}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_025", "history": [{"role": "user", "content": "我想查和张三合作的运单"}, {"role": "assistant", "content": "好的，正在为您查询与张三的合作记录。"}], "query": "顺便把李四的也查一下", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_026", "history": [], "query": "显示运单列表为什么只有10条，不是一百多条吗", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_027", "history": [], "query": "帮我看看有没有遗漏的运单", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_028", "history": [], "query": "怎么按货物类型筛选运单", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_029", "history": [], "query": "历史运单能按装货港和卸货港排序吗", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_030", "history": [], "query": "完成的运单和进行中的运单怎么区分", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_031", "history": [], "query": "我的运单里有没有被取消的", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_032", "history": [], "query": "查一下6月15日到6月30日之间的运单", "label": {"intent": "QUERY_ORDER", "slots": {"date_time": "6月15日到6月30日"}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_033", "history": [], "query": "江阴港发货的运单有哪些", "label": {"intent": "QUERY_ORDER", "slots": {"port_name": "江阴港"}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_034", "history": [], "query": "这批货的运单什么时候能查到", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_035", "history": [], "query": "运单状态都是已完成的，怎么全是执行中", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_036", "history": [], "query": "帮我统计下今年每月的运单数量", "label": {"intent": "QUERY_ORDER", "slots": {"date_time": "今年"}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_037", "history": [], "query": "总运量怎么统计的", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_038", "history": [], "query": "有没有运单明细表可以导出", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_039", "history": [], "query": "作废的运单还能恢复吗", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_040", "history": [], "query": "怎么查看运单的完整轨迹", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_041", "history": [], "query": "运单详情页打不开怎么办", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_042", "history": [], "query": "一条运单能修改几次", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_043", "history": [], "query": "装货港写错了怎么改", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_044", "history": [], "query": "为什么看不到卸货港信息", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_045", "history": [], "query": "同一个客户的所有运单能一起显示吗", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_046", "history": [], "query": "搜索功能怎么用", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_047", "history": [], "query": "能按船队查询运单吗", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_048", "history": [], "query": "船东的运单和货主的运单在哪看", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_049", "history": [], "query": "怎么查找我发布的所有运单", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}
+{"id": "order_050", "history": [], "query": "船还没到卸货港，运单显示已完成怎么回事", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "订单查询"}}

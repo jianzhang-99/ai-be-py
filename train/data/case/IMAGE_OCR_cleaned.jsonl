@@ -1,0 +1,50 @@
+{"id": "ocr_001", "history": [], "query": "发一张磅单照片帮我识别录入运单", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_002", "history": [], "query": "把这张发货单上的信息帮我提取出来", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_003", "history": [], "query": "上传的运单照片模糊能识别吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_004", "history": [], "query": "拍照上传了张装货单，帮我识别内容", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_005", "history": [], "query": "扫了一单据，请帮我转成电子运单", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_006", "history": [], "query": "这张单子字有点小，能看清吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_007", "history": [], "query": "识别的信息有误怎么修改", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_008", "history": [], "query": "支持识别手写单据吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_009", "history": [], "query": "我把单据拍照发给你，帮我录进去", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_010", "history": [], "query": "扫描件是PDF格式能识别吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_011", "history": [], "query": "提货单照片帮我识别一下", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_012", "history": [], "query": "集装箱号能识别出来吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_013", "history": [], "query": "船名航次信息从哪张单据识别", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_014", "history": [], "query": "这份运单照片帮我转成表格", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_015", "history": [], "query": "图片里货物数量和品名帮我提取", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_016", "history": [], "query": "上传的磅单图片歪的能纠正吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_017", "history": [], "query": "批量上传多张单据能一起识别吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_018", "history": [], "query": "帮我把这叠发票都识别了", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_019", "history": [], "query": "识别完的内容支持导出吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_020", "history": [], "query": "水印遮挡部分内容能补全识别吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_021", "history": [{"role": "user", "content": "发一张单据照片"}, {"role": "assistant", "content": "好的，请发送需要识别的单据照片。"}], "query": "这是我刚拍的装货单，帮我识别录入", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_022", "history": [{"role": "user", "content": "识别一下这张磅单"}, {"role": "assistant", "content": "已识别完成：船名华航118，货物砂石3000吨，装货港南京龙潭。"}], "query": "船长联系电话没有识别出来，帮我补上", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_023", "history": [{"role": "user", "content": "上传了张单据"}, {"role": "assistant", "content": "图片已收到，正在识别中..."}, {"role": "user", "content": "识别好了吗"}], "query": "还没识别完吗，太慢了", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_024", "history": [{"role": "user", "content": "帮我把运单录进去"}, {"role": "assistant", "content": "请发送运单照片或填写运单信息。"}], "query": "我有十几张单据要录，有没有批量处理", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_025", "history": [{"role": "user", "content": "这张单据识别结果不对"}, {"role": "assistant", "content": "请指出具体错误信息，我来帮您修正。"}], "query": "货物重量识别成了5000吨，实际是500吨", "label": {"intent": "IMAGE_OCR", "slots": {"cargo_weight": "500吨"}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_026", "history": [], "query": "用手机相机拍摄的单据能识别吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_027", "history": [], "query": "微信聊天里的图片能直接识别吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_028", "history": [], "query": "截图也能识别吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_029", "history": [], "query": "黑白复印件能识别出文字吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_030", "history": [], "query": "单据上有两个船名，以哪个为准", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_031", "history": [], "query": "帮我提取这张发票上的日期和金额", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_032", "history": [], "query": "货代单能识别吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_033", "history": [], "query": "识别后的信息存在哪里", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_034", "history": [], "query": "历史识别记录能查看吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_035", "history": [], "query": "识别错误会计入准确率吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_036", "history": [], "query": "可以只识别单据的一部分吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_037", "history": [], "query": "中英文混合的单据能识别吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_038", "history": [], "query": "运单上的备注信息能提取吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_039", "history": [], "query": "同一批货有多张单据能合并吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_040", "history": [], "query": "识别完会自动保存到运单列表吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_041", "history": [], "query": "单据识别完成后再修改还能保存吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_042", "history": [], "query": "图片太大上传失败怎么办", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_043", "history": [], "query": "网络不好能离线识别吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_044", "history": [], "query": "识别速度太慢能加快吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_045", "history": [], "query": "有些单据是翻拍的能识别清楚吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_046", "history": [], "query": "运单上盖了章会影响识别吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_047", "history": [], "query": "单据折痕地方的字能看清吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_048", "history": [], "query": "帮我把单据图片转成Word文档", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_049", "history": [], "query": "识别的内容能直接打印吗", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "ocr_050", "history": [], "query": "一票货有发货清单和收货单两张，都发给你", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}

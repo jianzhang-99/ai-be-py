@@ -1,0 +1,50 @@
+{"id": "doc_001", "history": [], "query": "运吨吨平台怎么注册船东账号", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_002", "history": [], "query": "个人货主入驻需要准备什么材料", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_003", "history": [], "query": "企业认证船东要多久审核通过", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_004", "history": [], "query": "平台抽成多少，有没有费率表", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_005", "history": [], "query": "VIP会员和一普通会员区别在哪", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_006", "history": [], "query": "怎么申请电子合同模板", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_007", "history": [], "query": "危险品货物运输需要什么资质", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_008", "history": [], "query": "货物运输险怎么购买，保险费率多少", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_009", "history": [], "query": "出现货损怎么申请理赔，需要什么证据", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_010", "history": [], "query": "运单确认后还能修改装货港吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_011", "history": [], "query": "批量导入运单支持什么格式", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_012", "history": [], "query": "船舶位置信息多久更新一次，是不是实时的", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_013", "history": [], "query": "平台支持对接我们公司ERP系统吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_014", "history": [], "query": "API接口文档在哪里下载", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_015", "history": [], "query": "有技术对接人员联系方式吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_016", "history": [], "query": "客户服务热线几点到几点有人接", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_017", "history": [], "query": "夜间有问题找谁处理", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_018", "history": [], "query": "怎么反馈数据错误问题", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_019", "history": [], "query": "平台上的船舶信息准确吗，怎么验证", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_020", "history": [], "query": "为什么有些船查不到位置信息", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_021", "history": [], "query": "新手入门教程在哪看", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_022", "history": [], "query": "有没有视频操作演示", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_023", "history": [], "query": "发票怎么申请，增票税率多少", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_024", "history": [], "query": "对公账户转账多久到账", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_025", "history": [], "query": "账户余额提现多久到银行卡", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_026", "history": [], "query": "超载了会有什么处罚", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_027", "history": [], "query": "船舶证书过期了还能继续运营吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_028", "history": [], "query": "派船流程是怎么样的", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_029", "history": [], "query": "装货前需要准备哪些单据", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_030", "history": [], "query": "运吨吨主要是做什么业务的", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_031", "history": [{"role": "user", "content": "我想查下我的历史运单"}, {"role": "assistant", "content": "好的，请问您想查询哪个时间段的历史运单？"}], "query": "不用了，我想先了解一下平台怎么收费的", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_032", "history": [{"role": "user", "content": "这条船位置怎么查不到"}, {"role": "assistant", "content": "这艘船可能没有安装AIS设备或者设备信号不稳定。"}, {"role": "user", "content": "那平台有什么办法能看到船的位置吗"}], "query": "没有AIS还能用你们平台找船吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_033", "history": [{"role": "user", "content": "怎么注册账号"}, {"role": "assistant", "content": "您可以点击注册，选择船东或货主类型，提交相关证件进行认证。"}], "query": "注册需要收费吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_034", "history": [{"role": "user", "content": "我的货还没到"}, {"role": "assistant", "content": "请问您说的是哪票货？我可以帮您查询运输进度。"}], "query": "我想先问问你们客服几点下班", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_035", "history": [{"role": "user", "content": "货损了怎么办"}, {"role": "assistant", "content": "请提供货损照片和相关单据，我可以帮您发起理赔流程。"}], "query": "理赔需要准备什么材料，有效期多久", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_036", "history": [], "query": "你们和别的平台比起来有什么优势", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_037", "history": [], "query": "可以批量管理多条船吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_038", "history": [], "query": "数据能导出到Excel吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_039", "history": [], "query": "怎么修改绑定的手机号", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_040", "history": [], "query": "账号被盗了怎么处理", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_041", "history": [], "query": "运费结算周期是多久", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_042", "history": [], "query": "月结客户需要什么条件", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_043", "history": [], "query": "可以用信用卡支付运费吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_044", "history": [], "query": "微信支付有限额吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_045", "history": [], "query": "预付款可以退款吗", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_046", "history": [], "query": "船舶证书到期前多久会提醒", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_047", "history": [], "query": "船东认证失败是什么原因", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_048", "history": [], "query": "怎么删除已经完成的运单", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_049", "history": [], "query": "订单取消后多久能重新发布", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}
+{"id": "doc_050", "history": [], "query": "历史运单保存多长时间", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答"}}

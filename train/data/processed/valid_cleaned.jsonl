@@ -13,7 +13,6 @@
 {"id": "valid_000013", "history": [], "query": "现在煤炭运费行情", "label": {"intent": "QUERY_FREIGHT", "slots": {"cargo_name": "煤炭"}, "need_clarify": false}}
 {"id": "valid_000014", "history": [], "query": "张家港到重庆有没有1万吨的船", "label": {"intent": "FIND_SHIP", "slots": {"cargo_weight": "1万吨", "route_from": "张家港", "route_to": "重庆"}, "need_clarify": false}}
 {"id": "valid_000015", "history": [], "query": "数据同步有问题，我在PC上发的运单手机上看不到", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
-{"id": "valid_000016", "history": [], "query": "从南京到武汉这条线这两天能见度怎么样", "label": {"intent": "QUERY_WEATHER", "slots": {"route_from": "南京", "route_to": "武汉"}, "need_clarify": false}, "metadata": {"section": "天气"}}
 {"id": "valid_000017", "history": [], "query": "这条船的轨迹", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
 {"id": "valid_000018", "history": [], "query": "俞垛79的船舶证书齐全吗", "label": {"intent": "QUERY_SHIP_INFO", "slots": {"ship_name": "俞垛79"}, "need_clarify": false}}
 {"id": "valid_000019", "history": [], "query": "重庆到南京有回程船吗，钢材3000吨", "label": {"intent": "FIND_SHIP", "slots": {"cargo_name": "钢材", "cargo_weight": "3000吨", "route_from": "重庆", "route_to": "南京"}, "need_clarify": false}, "metadata": {"section": "找船"}}
@@ -24,13 +23,10 @@
 {"id": "valid_000024", "history": [], "query": "录入运单，南京龙潭到万州，矿石8000吨，月底装货", "label": {"intent": "SAVE_ORDER", "slots": {"port_name": "南京龙潭", "cargo_name": "矿石", "cargo_weight": "8000吨", "route_from": "南京龙潭", "route_to": "万州", "date_time": "月底"}, "need_clarify": false}}
 {"id": "valid_000025", "history": [], "query": "查我上次那票货的运单", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}}
 {"id": "valid_000026", "history": [], "query": "帮我查查有没有船", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
-{"id": "valid_000027", "history": [], "query": "这条船的轨迹", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}}
 {"id": "valid_000028", "history": [], "query": "你们这个怎么用", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
 {"id": "valid_000029", "history": [], "query": "帮我查一下", "label": {"intent": "TALK", "slots": {}, "need_clarify": true}}
 {"id": "valid_000030", "history": [], "query": "5000吨船从南通到上海多少钱", "label": {"intent": "QUERY_FREIGHT", "slots": {"cargo_weight": "5000吨", "route_from": "南通", "route_to": "上海"}, "need_clarify": false}}
 {"id": "valid_000031", "history": [], "query": "帮我找船", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
-{"id": "valid_000032", "history": [], "query": "帮我查一下船和天气", "label": {"intent": "TALK", "slots": {}, "need_clarify": true}}
-{"id": "valid_000033", "history": [], "query": "在吗", "label": {"intent": "TALK", "slots": {}, "need_clarify": false}}
 {"id": "valid_000034", "history": [], "query": "客服态度太差了，问个问题爱答不理", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
 {"id": "valid_000035", "history": [], "query": "怎么注册账号？", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}, "metadata": {"section": "文档问答、Q&A"}}
 {"id": "valid_000036", "history": [], "query": "帮我预定这艘船", "label": {"intent": "TALK", "slots": {}, "need_clarify": true}}
@@ -52,7 +48,6 @@
 {"id": "valid_000052", "history": [], "query": "华航118到重庆果园港大概还要多久", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "华航118", "port_name": "重庆果园港"}, "need_clarify": false}, "metadata": {"section": "查船"}}
 {"id": "valid_000053", "history": [], "query": "皖航339船主联系电话", "label": {"intent": "QUERY_SHIP_INFO", "slots": {"ship_name": "皖航339"}, "need_clarify": false}}
 {"id": "valid_000054", "history": [], "query": "重庆珞璜，到，江西星子，煤，15,000吨左右。船到就装，有定金，装卸快，", "label": {"intent": "FIND_SHIP", "slots": {"cargo_weight": "15000吨", "cargo_name": "煤", "route_from": "重庆珞璜", "route_to": "江西星子"}, "need_clarify": false}}
-{"id": "valid_000055", "history": [], "query": "浙江有哪些船闸？", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
 {"id": "valid_000056", "history": [], "query": "问一下最近的加油站位置", "label": {"intent": "QUERY_OIL_STATION", "slots": {}, "need_clarify": true}}
 {"id": "valid_000057", "history": [], "query": "8000吨船从南通到上海多少钱", "label": {"intent": "QUERY_FREIGHT", "slots": {"cargo_weight": "8000吨", "route_from": "南通", "route_to": "上海"}, "need_clarify": false}}
 {"id": "valid_000058", "history": [], "query": "华航118什么时候到港", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "华航118"}, "need_clarify": false}, "metadata": {"section": "查船"}}
