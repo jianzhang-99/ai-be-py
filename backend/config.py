@@ -24,10 +24,10 @@ class Settings(BaseSettings):
     port: int = Field(default=9020, alias="PORT")
 
     # ========== LLM 配置 ==========
-    llm_provider: str = Field(default="qwen", alias="LLM_PROVIDER")
+    llm_provider: str = Field(default="tongyi", alias="LLM_PROVIDER")
     deepseek_api_key: Optional[str] = Field(default=None, alias="DEEPSEEK_API_KEY")
     deepseek_model: str = Field(default="deepseek-chat", alias="DEEPSEEK_MODEL")
-    enable_mock_llm: bool = Field(default=True, alias="ENABLE_MOCK_LLM")
+    enable_mock_llm: bool = Field(default=False, alias="ENABLE_MOCK_LLM")
 
     # Qwen 本地模型配置
     qwen_api_key: str = Field(default="not-needed", alias="QWEN_API_KEY")
@@ -36,6 +36,7 @@ class Settings(BaseSettings):
 
     # 通义千问 API
     tongyi_api_key: str = Field(default="sk-fe5c01bf68494deab1e458bd54895391", alias="TONGYI_API_KEY")
+    tongyi_model: str = Field(default="qwen-plus", alias="TONGYI_MODEL")
 
     # ========== 数据库配置 ==========
     mysql_host: str = Field(default="119.3.87.115", alias="MYSQL_HOST")

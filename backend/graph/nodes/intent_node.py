@@ -2,7 +2,7 @@ from __future__ import annotations
 
 """意图识别节点。"""
 
-from backend.graph.state.agent_state import AgentState, IntentInfo
+from backend.graph.state.agent_state import AgentState, IntentInfo, SceneEnum
 from backend.services.intent_service import IntentService
 
 
@@ -13,44 +13,38 @@ class IntentNode:
         self.service = IntentService()
 
     async def entrypoint(self, state: AgentState) -> AgentState:
-        """优先使用规则识别，LLM 作为备选方案。"""
+        """按最小链路执行：规则预处理 -> 专属意图模型。"""
         user_input = state["user_input"]
         working_memory = state.get("working_memory", {})
+        history = state.get("history", [])
 
-        # Layer 1: 规则网关
-        intent_result = await self.service.recognize_by_rule(
-            user_input, working_memory
-        )
+        intent_result = await self.service.recognize_by_rule(user_input, working_memory)
         if intent_result:
             return {
                 "intent": IntentInfo(
                     intent=intent_result["intent"],
-                    confidence=1.0,
-                    method="rule",
+                    confidence=float(intent_result.get("confidence", 1.0)),
+                    method=str(intent_result.get("method", "rule")),
                 ),
                 "scene": intent_result["intent"],
             }
 
-        # Layer 2: LLM 分类
-        intent_result = await self.service.recognize_by_llm(
-            user_input, working_memory
-        )
+        intent_result = await self.service.recognize_by_model(user_input, history)
         if intent_result:
             return {
                 "intent": IntentInfo(
                     intent=intent_result["intent"],
-                    confidence=intent_result.get("confidence", 0.8),
-                    method="llm",
+                    confidence=float(intent_result.get("confidence", 0.8)),
+                    method=str(intent_result.get("method", "custom_model")),
                 ),
                 "scene": intent_result["intent"],
             }
 
-        # Layer 3: 默认 fallback
         return {
             "intent": IntentInfo(
-                intent="TALK",
+                intent=SceneEnum.TALK,
                 confidence=0.5,
                 method="guard",
             ),
-            "scene": "TALK",
+            "scene": SceneEnum.TALK,
         }

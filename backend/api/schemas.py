@@ -44,3 +44,17 @@ class ChatEvent(BaseModel):
 
 ChatStreamRequest = ChatRequest
 ChatStreamResponse = ChatEvent
+
+
+class PipelineAnalysisResponse(BaseModel):
+    """意图判定流水线调试结果。"""
+
+    preprocessed_input: str
+    intent_candidates: list[dict[str, Any]]
+    slots: dict[str, dict[str, Any]]
+    entity_candidates: list[dict[str, Any]]
+    clarify: dict[str, Any]
+    final_intent: Optional[str] = None
+    final_slots: dict[str, list[str]]
+    can_route: bool
+    route_tool: Optional[str] = None

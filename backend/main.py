@@ -11,7 +11,7 @@ from backend.config import get_settings
 from backend.api.routers import auth, chat, health, input, oss, session
 from backend.api.routers import ship as ship_router
 from backend.api.routers import order as order_router
-from backend.api.routers import ai_be_compat
+from backend.api.routers import ai_be_compat, chat_log_admin
 from backend.infra.observability import get_metrics, get_metrics_content_type, setup_logging, setup_tracer
 
 settings = get_settings()
@@ -47,6 +47,7 @@ app.include_router(oss.router)
 app.include_router(ship_router.router)
 app.include_router(order_router.router)
 app.include_router(ai_be_compat.router)
+app.include_router(chat_log_admin.router)
 
 
 @app.get("/")

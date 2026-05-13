@@ -17,6 +17,7 @@ dependencies = [
     # LLM
     "deepseek>=0.1.0",
     "langchain-openai>=0.1.0",
+    "dashscope>=1.20.0",
 
     # Database
     "aiomysql>=0.2.0",

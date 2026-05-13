@@ -1,7 +1,7 @@
 """
-BERT 意图识别模型评测脚本
+意图识别模型评测脚本
 
-覆盖《04-评估指标设计.md》中的核心离线指标：
+覆盖核心离线指标：
 - Intent Accuracy / Macro F1 / Weighted F1
 - Clarify Precision / Recall / F1
 - Slot Entity Precision / Recall / F1
@@ -47,6 +47,25 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(me
 logger = logging.getLogger(__name__)
 
 
+# 中文意图标签说明
+INTENT_LABELS_CN = {
+    "DOC_QA": "文档问答",
+    "FIND_SHIP": "找船",
+    "SAVE_ORDER": "发布运单",
+    "QUERY_ORDER": "查询订单",
+    "QUERY_SHIP": "查船位置",
+    "QUERY_FREIGHT": "运价查询",
+    "QUERY_WEATHER": "天气查询",
+    "QUERY_WATER_LEVEL": "水位查询",
+    "DISPATCH_MONITOR": "在途监控",
+    "IMAGE_OCR": "图片识别",
+    "FEEDBACK": "反馈投诉",
+    "QUERY_OIL_STATION": "加油站查询",
+    "QUERY_SHIP_INFO": "船舶档案",
+    "TALK": "闲聊",
+}
+
+
 def classification_metrics(preds: list[int], labels: list[int], label_names: list[str]) -> dict[str, Any]:
     """不依赖 sklearn 的多分类 Accuracy / Macro F1 / Weighted F1。"""
     total = len(labels)
@@ -70,6 +89,7 @@ def classification_metrics(preds: list[int], labels: list[int], label_names: lis
             "recall": recall,
             "f1": f1,
             "support": label_support,
+            "name_cn": INTENT_LABELS_CN.get(name, name),
         }
         f1_values.append(f1)
         weighted_f1_sum += f1 * label_support
@@ -181,7 +201,11 @@ def evaluate_model(model, dataloader, samples: list[dict[str, Any]], tokenizer, 
     intent_slots_match_count = 0
     context_total = 0
     context_correct = 0
-    per_intent = defaultdict(lambda: {"correct": 0, "total": 0})
+    per_intent = defaultdict(lambda: {"correct": 0, "total": 0, "exact_match": 0})
+    # 按 intent 统计 slot entity f1
+    per_intent_slot_f1: dict[str, dict[str, int]] = defaultdict(lambda: {"tp": 0, "fp": 0, "fn": 0})
+    # 按 intent 统计 clarify recall（只统计 need_clarify=True 的）
+    per_intent_clarify_recall: dict[str, dict[str, int]] = defaultdict(lambda: {"correct": 0, "total": 0})
 
     for idx, sample in enumerate(samples):
         gold_intent = sample.get("label", {}).get("intent", "UNKNOWN")
@@ -190,7 +214,9 @@ def evaluate_model(model, dataloader, samples: list[dict[str, Any]], tokenizer, 
         gold_slot_set = {entity_key(e) for e in slot_golds[idx]}
         intent_ok = pred_intent == gold_intent
         slots_ok = pred_slot_set == gold_slot_set
-        clarify_ok = bool(clarify_preds[idx]) == bool(sample.get("label", {}).get("need_clarify", False))
+        gold_clarify = sample.get("label", {}).get("need_clarify", False)
+        pred_clarify = bool(clarify_preds[idx])
+        clarify_ok = pred_clarify == gold_clarify
 
         per_intent[gold_intent]["total"] += 1
         if intent_ok:
@@ -199,6 +225,23 @@ def evaluate_model(model, dataloader, samples: list[dict[str, Any]], tokenizer, 
             intent_slots_match_count += 1
         if intent_ok and slots_ok and clarify_ok:
             exact_match_count += 1
+            per_intent[gold_intent]["exact_match"] += 1
+
+        # 统计 clarify recall（只看 need_clarify=True 的正样本）
+        if gold_clarify:
+            per_intent_clarify_recall[gold_intent]["total"] += 1
+            if clarify_ok:
+                per_intent_clarify_recall[gold_intent]["correct"] += 1
+
+        # 统计 per-intent slot entity f1
+        for entity in slot_preds[idx]:
+            if entity in gold_slot_set:
+                per_intent_slot_f1[gold_intent]["tp"] += 1
+            else:
+                per_intent_slot_f1[gold_intent]["fp"] += 1
+        for entity in gold_slot_set:
+            if entity not in pred_slot_set:
+                per_intent_slot_f1[gold_intent]["fn"] += 1
 
         if sample.get("label", {}).get("context_inherited"):
             context_total += 1
@@ -206,6 +249,16 @@ def evaluate_model(model, dataloader, samples: list[dict[str, Any]], tokenizer, 
                 context_correct += 1
 
     total = len(samples)
+
+    # 计算 business-oriented score
+    # score = 0.35 * intent_f1_macro + 0.25 * clarify_f1 + 0.25 * slot_f1 + 0.15 * exact_match
+    business_score = (
+        0.35 * intent_metrics["f1_macro"]
+        + 0.25 * clarify_f1
+        + 0.25 * slot_metrics["f1"]
+        + 0.15 * safe_div(exact_match_count, total)
+    )
+
     return {
         "intent": intent_metrics,
         "clarify": {
@@ -221,13 +274,35 @@ def evaluate_model(model, dataloader, samples: list[dict[str, Any]], tokenizer, 
             "context_inheritance_rate": safe_div(context_correct, context_total),
             "context_total": context_total,
         },
+        "business_score": business_score,
         "per_intent_accuracy": {
             intent: {
                 "accuracy": safe_div(stats["correct"], stats["total"]),
                 "correct": stats["correct"],
                 "total": stats["total"],
+                "exact_match": stats["exact_match"],
+                "exact_match_ratio": safe_div(stats["exact_match"], stats["total"]),
             }
             for intent, stats in sorted(per_intent.items())
+        },
+        "per_intent_slot_f1": {
+            intent: {
+                "f1": safe_div(2 * d["tp"], 2 * d["tp"] + d["fp"] + d["fn"]) if (2 * d["tp"] + d["fp"] + d["fn"]) > 0 else 0,
+                "precision": safe_div(d["tp"], d["tp"] + d["fp"]) if (d["tp"] + d["fp"]) > 0 else 0,
+                "recall": safe_div(d["tp"], d["tp"] + d["fn"]) if (d["tp"] + d["fn"]) > 0 else 0,
+                "tp": d["tp"],
+                "fp": d["fp"],
+                "fn": d["fn"],
+            }
+            for intent, d in sorted(per_intent_slot_f1.items())
+        },
+        "per_intent_clarify_recall": {
+            intent: {
+                "recall": safe_div(stats["correct"], stats["total"]) if stats["total"] > 0 else 0,
+                "correct": stats["correct"],
+                "total": stats["total"],
+            }
+            for intent, stats in sorted(per_intent_clarify_recall.items())
         },
         "bad_cases": bad_cases,
     }
@@ -280,18 +355,101 @@ def main() -> None:
 
     results = evaluate_model(model, test_loader, samples, tokenizer, device)
 
-    logger.info("=" * 50)
-    logger.info("意图识别评估结果")
-    logger.info("=" * 50)
-    logger.info("Intent Accuracy: %.4f", results["intent"]["accuracy"])
-    logger.info("Intent Macro F1: %.4f", results["intent"]["f1_macro"])
-    logger.info("Intent Weighted F1: %.4f", results["intent"]["f1_weighted"])
-    logger.info("Clarify Precision: %.4f", results["clarify"]["precision"])
-    logger.info("Clarify Recall: %.4f", results["clarify"]["recall"])
-    logger.info("Clarify F1: %.4f", results["clarify"]["f1"])
-    logger.info("Slot Entity F1: %.4f", results["slot_entity"]["f1"])
-    logger.info("Exact Match: %.4f", results["end_to_end"]["exact_match"])
-    logger.info("Context Inheritance Rate: %.4f", results["end_to_end"]["context_inheritance_rate"])
+    # 中文输出结果
+    intent_m = results["intent"]
+    clarify_m = results["clarify"]
+    slot_m = results["slot_entity"]
+    end_to_end = results["end_to_end"]
+
+    print("\n" + "=" * 70)
+    print("意图识别模型评测报告")
+    print("=" * 70)
+
+    # 业务综合评分
+    business_score = results.get("business_score", 0)
+    print(f"\n【业务综合评分】 {business_score:.4f}")
+    print("  (score = 0.35*intent_f1_macro + 0.25*clarify_f1 + 0.25*slot_f1 + 0.15*exact_match)")
+
+    print("\n【意图识别】")
+    print(f"  准确率 (Accuracy): {intent_m['accuracy']:.4f}")
+    print(f"  Macro F1:          {intent_m['f1_macro']:.4f}")
+    print(f"  Weighted F1:       {intent_m['f1_weighted']:.4f}")
+
+    print("\n【澄清判断】")
+    print(f"  Precision: {clarify_m['precision']:.4f}")
+    print(f"  Recall:    {clarify_m['recall']:.4f}")
+    print(f"  F1:        {clarify_m['f1']:.4f}")
+
+    print("\n【槽位抽取】")
+    print(f"  Entity F1:       {slot_m['f1']:.4f}")
+    print(f"  Entity Recall:   {slot_m['recall']:.4f}")
+    print(f"  Entity Prec:     {slot_m['precision']:.4f}")
+
+    print("\n【端到端匹配】")
+    print(f"  Exact Match:            {end_to_end['exact_match']:.4f}")
+    print(f"  Intent+Slots Match:     {end_to_end['intent_slots_match']:.4f}")
+    print(f"  Context Inheritance:    {end_to_end['context_inheritance_rate']:.4f}")
+
+    # 各意图详细指标
+    print("\n【各意图详细指标】")
+    per_intent_acc = results.get("per_intent_accuracy", {})
+    per_intent_slot_f1 = results.get("per_intent_slot_f1", {})
+    per_intent_clarify_recall = results.get("per_intent_clarify_recall", {})
+
+    print(f"  {'意图':<12} {'准确率':>8} {'ExactMatch':>10} {'Slot F1':>8} {'Clarify Recall':>12} {'样本数':>6}")
+    print(f"  {'-'*12} {'-'*8} {'-'*10} {'-'*8} {'-'*12} {'-'*6}")
+
+    for intent in INTENT_LABELS:
+        stats = per_intent_acc.get(intent, {"accuracy": 0, "correct": 0, "total": 0, "exact_match": 0})
+        slot_f1_info = per_intent_slot_f1.get(intent, {"f1": 0})
+        clarify_info = per_intent_clarify_recall.get(intent, {"recall": 0, "total": 0})
+
+        cn_name = INTENT_LABELS_CN.get(intent, intent)
+        acc = stats["accuracy"]
+        em = stats.get("exact_match_ratio", safe_div(stats.get("exact_match", 0), stats["total"]))
+        sf1 = slot_f1_info.get("f1", 0)
+        cr = clarify_info.get("recall", 0)
+        total = stats["total"]
+
+        bar = "█" * int(acc * 10) + "░" * (10 - int(acc * 10))
+        print(f"  {cn_name:<12} [{bar}] {acc:.2%}   {em:.2%}       {sf1:.2%}     {cr:.2%}          {total:>4}")
+
+    # 业务主链路意图（FIND_SHIP, QUERY_SHIP, SAVE_ORDER, QUERY_FREIGHT）
+    print("\n【业务主链路意图】")
+    main_intents = ["FIND_SHIP", "QUERY_SHIP", "SAVE_ORDER", "QUERY_FREIGHT"]
+    for intent in main_intents:
+        stats = per_intent_acc.get(intent, {"accuracy": 0, "correct": 0, "total": 0})
+        slot_f1_info = per_intent_slot_f1.get(intent, {"f1": 0, "precision": 0, "recall": 0})
+        clarify_info = per_intent_clarify_recall.get(intent, {"recall": 0, "total": 0})
+
+        cn_name = INTENT_LABELS_CN.get(intent, intent)
+        acc = stats["accuracy"]
+        total = stats["total"]
+        sf1 = slot_f1_info.get("f1", 0)
+        sp = slot_f1_info.get("precision", 0)
+        sr = slot_f1_info.get("recall", 0)
+        cr = clarify_info.get("recall", 0)
+        ct = clarify_info.get("total", 0)
+
+        print(f"  {cn_name}({intent}):")
+        print(f"    意图准确率: {acc:.2%} ({stats['correct']}/{total})")
+        print(f"    槽位 F1: {sf1:.2%} (P={sp:.2%}, R={sr:.2%})")
+        if ct > 0:
+            print(f"    Clarify Recall: {cr:.2%} ({clarify_info['correct']}/{ct})")
+
+    bad_cases = results.get("bad_cases", [])
+    if bad_cases:
+        print(f"\n【Bad Cases】(共 {len(bad_cases)} 条)")
+        for i, case in enumerate(bad_cases[:10], 1):
+            print(f"\n  #{i} ID: {case.get('id', 'N/A')}")
+            print(f"     Query: {case.get('query', '')[:50]}")
+            gold = case.get("gold", {})
+            pred = case.get("pred", {})
+            print(f"     预期: {INTENT_LABELS_CN.get(gold.get('intent',''), gold.get('intent',''))} | 预测: {INTENT_LABELS_CN.get(pred.get('intent',''), pred.get('intent',''))}")
+
+    print("\n" + "=" * 60)
+    print(f"评测结果已保存到: {output_path}")
+    print("=" * 60 + "\n")
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", encoding="utf-8") as f:

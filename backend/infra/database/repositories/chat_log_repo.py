@@ -157,3 +157,84 @@ class ChatLogRepository(BaseRepository):
             """,
             (session_id, phone),
         )
+
+    async def page_with_user_phone(
+        self,
+        current: int = 1,
+        size: int = 10,
+        session_id: str | None = None,
+        phone: str | None = None,
+        scene_code: str | None = None,
+        intent_code: str | None = None,
+        user_input: str | None = None,
+        start_time: str | None = None,
+        end_time: str | None = None,
+        include_internal_users: bool = False,
+    ) -> tuple[list[dict], int]:
+        """分页查询聊天日志（JOIN sys_user 获取用户姓名），返回 (记录列表, 总数)。"""
+
+        # 基础 JOIN 和 WHERE
+        base_sql = """
+            FROM ai_chat_log l
+            JOIN sys_user u ON l.user_id = u.id AND u.is_delete = 0
+            WHERE l.is_delete = 0
+        """
+        params: list[object] = []
+
+        if session_id:
+            base_sql += " AND l.session_id = %s"
+            params.append(session_id)
+
+        if phone:
+            base_sql += " AND l.phone = %s"
+            params.append(phone)
+
+        if scene_code:
+            base_sql += " AND l.scene_code = %s"
+            params.append(scene_code)
+
+        if intent_code:
+            base_sql += " AND l.intent_code = %s"
+            params.append(intent_code)
+
+        if user_input:
+            base_sql += " AND l.user_input LIKE %s"
+            params.append(f"%{user_input}%")
+
+        if start_time:
+            base_sql += " AND l.create_time >= %s"
+            params.append(start_time)
+
+        if end_time:
+            base_sql += " AND l.create_time <= %s"
+            params.append(end_time)
+
+        if not include_internal_users:
+            # 排除内部用户：手机号以 "ydd" 开头视为内部测试账号
+            base_sql += " AND l.phone NOT LIKE %s"
+            params.append('ydd%')
+
+        # 查询总数
+        count_sql = f"SELECT COUNT(*) AS total {base_sql}"
+        count_row = await self.client.fetch_one_async(count_sql, tuple(params))
+        total = int(count_row["total"]) if count_row and count_row.get("total") is not None else 0
+
+        # 查询分页记录
+        offset = (current - 1) * size
+        params.extend([size, offset])
+        select_sql = f"""
+            SELECT l.id, l.session_id, l.seq, l.phone,
+                   COALESCE(u.nick_name, '') AS user_name,
+                   l.scene_code, l.scene_name,
+                   l.intent_code, l.intent_name, l.intent_desc,
+                   l.user_input, l.ai_response,
+                   l.model_name, l.model_version,
+                   l.input_tokens, l.output_tokens,
+                   l.app_source,
+                   l.create_time
+            {base_sql}
+            ORDER BY l.create_time DESC
+            LIMIT %s OFFSET %s
+        """
+        rows = await self.client.fetch_all_async(select_sql, tuple(params))
+        return rows, total

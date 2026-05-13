@@ -1,27 +1,29 @@
+"""统一 LLM 客户端，支持 DeepSeek 和通义千问。"""
+
 from __future__ import annotations
 
-"""用于本地阶段一开发的 LLM 客户端，带有 mock 回退机制。"""
-
+import logging
 from collections.abc import AsyncGenerator
 from typing import Any, Optional
 
 from backend.config import get_settings
 
+logger = logging.getLogger(__name__)
+
 
 class LLMClient:
-    """供服务和节点使用的轻量级 LLM 抽象层。"""
+    """统一 LLM 客户端，参考 Java 版 LlmClient 架构。"""
 
     def __init__(self):
         self.settings = get_settings()
-        self.provider = self.settings.llm_provider
         self._client = None
 
     @property
     def client(self):
-        """延迟创建真实客户端，以便本地测试可以使用 mock 路径。"""
-
+        """根据配置的 provider 返回对应客户端。"""
         if self._client is None:
-            if self.provider == "deepseek":
+            provider = self.settings.llm_provider
+            if provider == "deepseek":
                 from langchain_deepseek import ChatDeepSeek
 
                 self._client = ChatDeepSeek(
@@ -30,7 +32,8 @@ class LLMClient:
                     temperature=0.7,
                     max_tokens=2000,
                 )
-            elif self.provider == "qwen":
+            elif provider == "qwen":
+                # qwen 通过 OpenAI 兼容接口调用
                 from langchain_openai import ChatOpenAI
 
                 self._client = ChatOpenAI(
@@ -40,25 +43,8 @@ class LLMClient:
                     temperature=0.7,
                 )
             else:
-                raise ValueError(f"Unsupported LLM provider: {self.provider}")
+                raise ValueError(f"Unsupported LLM provider: {provider}")
         return self._client
-
-    def _should_use_mock(self) -> bool:
-        """在阶段一验证期间避免对外部密钥的硬依赖。"""
-
-        return self.settings.enable_mock_llm and not self.settings.deepseek_api_key
-
-    def _build_mock_response(self, user_message: str) -> str:
-        """返回可预测的文本，用于本地开发和测试。"""
-
-        normalized = user_message.lower()
-        if "query_weather" in normalized or "天气" in normalized:
-            return "QUERY_WEATHER"
-        if "query_ship" in normalized or "查船" in normalized or "船舶" in normalized:
-            return "QUERY_SHIP"
-        if "save_order" in normalized or "录单" in normalized or "运单" in normalized:
-            return "SAVE_ORDER"
-        return "我是航运助手小吨，当前运行在本地 MVP 模式，可以先回答闲聊并串联工具结果。"
 
     def _build_messages(
         self,
@@ -67,12 +53,9 @@ class LLMClient:
         messages: Optional[list[dict[str, str]]] = None,
     ) -> list[Any]:
         """将普通历史记录转换为 LangChain 消息。"""
-
         from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 
-        langchain_messages: list[Any] = [
-            SystemMessage(content=system_prompt)
-        ]
+        langchain_messages: list[Any] = [SystemMessage(content=system_prompt)]
 
         if messages:
             for msg in messages[-10:]:
@@ -94,14 +77,61 @@ class LLMClient:
         user_message: str,
         messages: Optional[list[dict[str, str]]] = None,
     ) -> str:
-        """返回单个模型响应字符串。"""
+        """调用大模型返回单个响应。"""
+        provider = self.settings.llm_provider
 
-        if self._should_use_mock():
-            return self._build_mock_response(user_message)
+        if provider == "tongyi":
+            return await self._chat_tongyi(system_prompt, user_message, messages)
 
+        # DeepSeek / Qwen 使用 LangChain
         langchain_messages = self._build_messages(system_prompt, user_message, messages)
         response = await self.client.ainvoke(langchain_messages)
         return response.content
+
+    async def _chat_tongyi(
+        self,
+        system_prompt: str,
+        user_message: str,
+        messages: Optional[list[dict[str, str]]] = None,
+    ) -> str:
+        """使用通义千问 DashScope SDK 调用。"""
+        import dashscope
+        from dashscope import Generation
+
+        api_key = self.settings.tongyi_api_key
+        if not api_key:
+            raise ValueError("通义千问 API Key 未配置 (TONGYI_API_KEY)")
+
+        dashscope.api_key = api_key
+
+        # 构建消息列表
+        msgs = []
+        if messages:
+            for msg in messages[-10:]:
+                role = msg.get("role", "user")
+                content = msg.get("content", "")
+                if role == "user":
+                    msgs.append({"role": "user", "content": content})
+                elif role == "assistant":
+                    msgs.append({"role": "assistant", "content": content})
+                elif role == "system":
+                    msgs.append({"role": "system", "content": content})
+
+        msgs.append({"role": "user", "content": user_message})
+
+        response = Generation.call(
+            model=self.settings.tongyi_model,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                *msgs,
+            ],
+        )
+
+        if response.status_code != 200:
+            logger.error(f"通义千问调用失败: {response.message}")
+            raise ValueError(f"通义千问调用失败: {response.message}")
+
+        return response.output.text
 
     async def chat_stream(
         self,
@@ -109,13 +139,75 @@ class LLMClient:
         user_message: str,
         messages: Optional[list[dict[str, str]]] = None,
     ) -> AsyncGenerator[str, None]:
-        """为流式 API 生成响应块。"""
+        """流式调用大模型。"""
+        provider = self.settings.llm_provider
 
-        if self._should_use_mock():
-            yield self._build_mock_response(user_message)
+        if provider == "tongyi":
+            async for chunk in self._chat_stream_tongyi(system_prompt, user_message, messages):
+                yield chunk
             return
 
+        # DeepSeek / Qwen 使用 LangChain
         langchain_messages = self._build_messages(system_prompt, user_message, messages)
         async for chunk in self.client.astream(langchain_messages):
             if chunk.content:
                 yield chunk.content
+
+    async def _chat_stream_tongyi(
+        self,
+        system_prompt: str,
+        user_message: str,
+        messages: Optional[list[dict[str, str]]] = None,
+    ) -> AsyncGenerator[str, None]:
+        """使用通义千问 DashScope SDK 流式调用。"""
+        import dashscope
+        from dashscope import Generation
+
+        api_key = self.settings.tongyi_api_key
+        if not api_key:
+            raise ValueError("通义千问 API Key 未配置 (TONGYI_API_KEY)")
+
+        dashscope.api_key = api_key
+
+        # 构建消息列表
+        msgs = []
+        if messages:
+            for msg in messages[-10:]:
+                role = msg.get("role", "user")
+                content = msg.get("content", "")
+                if role == "user":
+                    msgs.append({"role": "user", "content": content})
+                elif role == "assistant":
+                    msgs.append({"role": "assistant", "content": content})
+                elif role == "system":
+                    msgs.append({"role": "system", "content": content})
+
+        msgs.append({"role": "user", "content": user_message})
+
+        responses = Generation.call(
+            model=self.settings.tongyi_model,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                *msgs,
+            ],
+            stream=True,
+            incremental_output=True,
+        )
+
+        for response in responses:
+            if response.status_code == 200:
+                yield response.output.text
+            else:
+                logger.error(f"通义千问流式调用失败: {response.message}")
+
+
+# 全局单例
+_llm_client: Optional[LLMClient] = None
+
+
+def get_llm_client() -> LLMClient:
+    """获取 LLM 客户端单例。"""
+    global _llm_client
+    if _llm_client is None:
+        _llm_client = LLMClient()
+    return _llm_client

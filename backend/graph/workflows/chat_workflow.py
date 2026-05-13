@@ -12,6 +12,7 @@ except ModuleNotFoundError:  # pragma: no cover - exercised only in lightweight 
     StateGraph = None
 
 from backend.api.schemas import ChatEvent
+from backend.graph.nodes.context_node import ContextNode
 from backend.graph.nodes.intent_node import IntentNode
 from backend.graph.nodes.memory_node import MemoryNode
 from backend.graph.nodes.response_node import ResponseNode
@@ -24,6 +25,7 @@ class ChatWorkflow:
     """聊天服务使用的工作流包装器。"""
 
     def __init__(self):
+        self.context_node = ContextNode()
         self.intent_node = IntentNode()
         self.routing_node = RoutingNode()
         self.tool_node = ToolNode()
@@ -39,12 +41,14 @@ class ChatWorkflow:
 
         workflow = StateGraph(AgentState)
 
+        workflow.add_node("context", self.context_node.entrypoint)
         workflow.add_node("intent", self.intent_node.entrypoint)
         workflow.add_node("routing", self.routing_node.entrypoint)
         workflow.add_node("tool", self.tool_node.entrypoint)
         workflow.add_node("response", self.response_node.entrypoint)
         workflow.add_node("memory", self.memory_node.entrypoint)
-        workflow.set_entry_point("intent")
+        workflow.set_entry_point("context")
+        workflow.add_edge("context", "intent")
         workflow.add_edge("intent", "routing")
         workflow.add_conditional_edges(
             "routing",
@@ -101,6 +105,7 @@ class ChatWorkflow:
         """按文档顺序生成第一阶段的SSE事件。"""
 
         state = self.build_initial_state(user_input, user_id, session_id, history)
+        state.update(await self.context_node.entrypoint(state))
         state.update(await self.intent_node.entrypoint(state))
 
         intent = state.get("intent")
@@ -149,6 +154,7 @@ class ChatWorkflow:
         initial_state = self.build_initial_state(user_input, user_id, session_id, history)
         if self.graph is None:
             state = initial_state
+            state.update(await self.context_node.entrypoint(state))
             state.update(await self.intent_node.entrypoint(state))
             state.update(await self.routing_node.entrypoint(state))
             if self._route_decision(state) == "tool":

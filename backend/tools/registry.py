@@ -8,6 +8,7 @@ from collections.abc import Awaitable, Callable
 from enum import Enum
 from typing import Any, Optional
 
+from backend.graph.state.agent_state import SceneEnum
 from backend.tools.order import OrderTool
 from backend.tools.ship import ShipTool
 from backend.tools.weather import WeatherTool
@@ -208,7 +209,8 @@ class ToolRegistry:
 
         if scene is None:
             return None
-        return self.SCENE_TO_TOOL.get(scene)
+        normalized_scene = SceneEnum.to_model_intent(scene) or str(scene)
+        return self.SCENE_TO_TOOL.get(normalized_scene)
 
     def has_tool(self, tool_name: str) -> bool:
         """检查注册表是否包含给定工具。"""

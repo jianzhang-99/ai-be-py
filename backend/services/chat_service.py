@@ -7,6 +7,7 @@ import uuid
 from typing import AsyncGenerator
 
 from backend.api.schemas import ChatEvent, ChatRequest, ChatResponse, ChatStreamResponse
+from backend.graph.state.agent_state import SceneEnum
 from backend.graph.workflows.chat_workflow import ChatWorkflow
 from backend.infra.database.repositories.chat_log_repo import ChatLogRepository
 
@@ -147,7 +148,8 @@ class ChatService:
         chat_result = result or {}
         intent_obj = chat_result.get("intent")
         resolved_intent_code = intent_code or (intent_obj.intent if intent_obj else None)
-        resolved_scene_code = str(scene_code or chat_result.get("scene") or request.scene or "TALK")
+        resolved_scene = SceneEnum.normalize(str(scene_code or chat_result.get("scene") or request.scene or "talk"))
+        resolved_scene_code = str(SceneEnum.to_model_intent(resolved_scene) or "TALK")
         original_request = {
             "input": request.message,
             "sessionId": session_id,
@@ -190,7 +192,8 @@ class ChatService:
             "SAVE_ORDER": "正在识别为运单场景并提取运单要素",
             "TALK": "正在理解你的问题",
         }
-        return mapping.get(intent or "", "正在处理你的问题")
+        normalized_intent = SceneEnum.to_model_intent(intent) or intent or ""
+        return mapping.get(normalized_intent, "正在处理你的问题")
 
     def _build_ai_be_event(self, event_type: str, content: object) -> dict[str, str]:
         """构造 AI-BE 兼容的 SSE 数据负载。"""
