@@ -1,0 +1,15 @@
+{"id": "real_00177", "history": [], "query": "南京外高桥码头泊位和吃水情况", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {}, "need_clarify": false}, "metadata": {"section": "水位"}}
+{"id": "real_00178", "history": [], "query": "查下南京到镇江这段航道水深", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {"route_from": "查下南京", "route_to": "镇江这段航道"}, "need_clarify": false}, "metadata": {"section": "水位"}}
+{"id": "real_00179", "history": [], "query": "南京到镇江通航水深多少", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {"route_from": "南京", "route_to": "镇江通航水深"}, "need_clarify": false}, "metadata": {"section": "水位"}}
+{"id": "real_00180", "history": [], "query": "镇江到南京现在水位怎么样", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {"route_from": "镇江", "route_to": "南京现在水位"}, "need_clarify": false}, "metadata": {"section": "水位"}}
+{"id": "real_00181", "history": [], "query": "宜昌到万州这段航道水位是不是偏低", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {"route_from": "宜昌", "route_to": "万州这段航道"}, "need_clarify": false}, "metadata": {"section": "水位"}}
+{"id": "real_00182", "history": [], "query": "长江口航道最新水深什么时候更新的", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {}, "need_clarify": false}, "metadata": {"section": "水位"}}
+{"id": "real_00184", "history": [], "query": "安庆到芜湖这一段现在水深多少", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {"port_name": "芜湖", "route_from": "安庆", "route_to": "芜湖这一段现"}, "need_clarify": false}, "metadata": {"section": "水位"}}
+{"id": "real_00185", "history": [], "query": "九江到南通这条线水位情况", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {"route_from": "九江", "route_to": "南通这条线水"}, "need_clarify": false}, "metadata": {"section": "水位"}}
+{"id": "real_00186", "history": [], "query": "南京到重庆主航道水位正常不", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {"route_from": "南京", "route_to": "重庆主航道水"}, "need_clarify": false}, "metadata": {"section": "水位"}}
+{"id": "real_00187", "history": [], "query": "镇江附近通航水深够不够", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {}, "need_clarify": false}, "metadata": {"section": "水位"}}
+{"id": "real_00188", "history": [], "query": "南京龙潭附近航道水位是不是有点低", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {"port_name": "南京龙潭"}, "need_clarify": false}, "metadata": {"section": "水位"}}
+{"id": "real_00189", "history": [], "query": "查下宜昌到重庆这一段的通航水深", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {"route_from": "查下宜昌", "route_to": "重庆这一段的"}, "need_clarify": false}, "metadata": {"section": "水位"}}
+{"id": "real_00190", "history": [], "query": "从南京到武汉这段航道水深最近有没有变化", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {"route_from": "从南京", "route_to": "武汉这段航道"}, "need_clarify": false}, "metadata": {"section": "水位"}}
+{"id": "real_00192", "history": [], "query": "南京到武汉这条线最近水位有没有偏低", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {"route_from": "南京", "route_to": "武汉这条线最"}, "need_clarify": false}, "metadata": {"section": "水位"}}
+{"id": "real_00193", "history": [], "query": "查询水位：城陵矶", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {}, "need_clarify": false}, "metadata": {"section": "水位"}}

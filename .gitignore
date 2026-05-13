@@ -33,6 +33,23 @@ htmlcov/
 *.log
 logs/
 
+# training outputs
+train/outputs/
+outputs/
+checkpoints/
+runs/
+wandb/
+
+# model files
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.gguf
+*.pkl
+
 # OS
 .DS_Store
 Thumbs.db

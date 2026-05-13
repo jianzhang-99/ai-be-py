@@ -1,0 +1,4 @@
+{"id": "real_00200", "history": [], "query": "识别图中文字", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "real_00201", "history": [], "query": "提取图中文字", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "real_00199", "history": [], "query": "这张磅单信息帮我识别成运单", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "real_00202", "history": [], "query": "提取图片中的文字", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}

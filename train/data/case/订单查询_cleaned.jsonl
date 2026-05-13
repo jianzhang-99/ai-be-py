@@ -1,0 +1,9 @@
+{"id": "real_00141", "history": [], "query": "历史运单查询", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "历史运单"}}
+{"id": "real_00142", "history": [], "query": "查一下历史运单", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "历史运单"}}
+{"id": "real_00143", "history": [], "query": "帮我查一下之前的运单", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "历史运单"}}
+{"id": "real_00144", "history": [], "query": "运单记录帮我查下", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "历史运单"}}
+{"id": "real_00145", "history": [], "query": "看一下以前的运单", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "历史运单"}}
+{"id": "real_00146", "history": [], "query": "查我上次那票货的运单", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "历史运单"}}
+{"id": "real_00147", "history": [], "query": "查下长江之星6号上个月的运单记录", "label": {"intent": "QUERY_ORDER", "slots": {"ship_name": "长江之星6号", "date_time": "6号"}, "need_clarify": false}, "metadata": {"section": "历史运单"}}
+{"id": "real_00151", "history": [], "query": "看下张三那条船的历史运单记录", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "历史运单"}}
+{"id": "real_00156", "history": [], "query": "看下我这周的所有运单记录", "label": {"intent": "QUERY_ORDER", "slots": {"date_time": "这周"}, "need_clarify": false}, "metadata": {"section": "历史运单"}}

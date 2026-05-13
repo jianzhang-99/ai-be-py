@@ -1,0 +1,80 @@
+{"id": "test_000001", "history": [], "query": "早上好", "label": {"intent": "TALK", "slots": {}, "need_clarify": false}}
+{"id": "test_000002", "history": [], "query": "录入运单，南京龙潭到万州，矿石8000吨，月底装货", "label": {"intent": "SAVE_ORDER", "slots": {"port_name": "南京龙潭", "cargo_name": "矿石", "cargo_weight": "8000吨", "route_from": "南京龙潭", "route_to": "万州", "date_time": "月底"}, "need_clarify": false}, "metadata": {"section": "发布运单"}}
+{"id": "test_000003", "history": [], "query": "南京龙潭附近航道水位是不是有点低", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {"port_name": "南京龙潭"}, "need_clarify": false}}
+{"id": "test_000004", "history": [], "query": "召集加油站0号柴油多少钱一吨", "label": {"intent": "QUERY_OIL_STATION", "slots": {}, "need_clarify": false}}
+{"id": "test_000005", "history": [], "query": "镇江港未来3天天气咋样", "label": {"intent": "QUERY_WEATHER", "slots": {"port_name": "镇江港"}, "need_clarify": false}}
+{"id": "test_000006", "history": [], "query": "南通到南京集装箱1万吨运价多少", "label": {"intent": "QUERY_FREIGHT", "slots": {}, "need_clarify": false}}
+{"id": "test_000007", "history": [], "query": "查一下南京7的位置", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "test_000008", "history": [], "query": "天气信息不准确，上次说晴天结果下大雨", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "test_000009", "history": [], "query": "南京港今天天气怎么样", "label": {"intent": "QUERY_WEATHER", "slots": {"port_name": "南京港", "date_time": "今天"}, "need_clarify": false}}
+{"id": "test_000010", "history": [], "query": "南京附近加油站0号柴油价格多少", "label": {"intent": "QUERY_OIL_STATION", "slots": {"port_name": "南京"}, "need_clarify": false}}
+{"id": "test_000011", "history": [], "query": "识别图中文字", "label": {"intent": "IMAGE_OCR", "slots": {}, "need_clarify": false}, "metadata": {"section": "图片识别"}}
+{"id": "test_000012", "history": [], "query": "注册需要什么信息？", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "test_000013", "history": [], "query": "船期预报不准，经常延误", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}, "metadata": {"section": "反馈投诉"}}
+{"id": "test_000014", "history": [], "query": "宁德--南通5000近期", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": false}, "metadata": {"section": "找船"}}
+{"id": "test_000015", "history": [], "query": "我想查一下这条船", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "test_000016", "history": [], "query": "货船运输进度怎么查看", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}}
+{"id": "test_000017", "history": [], "query": "安徽在哪", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": false}, "metadata": {"section": "闲聊"}}
+{"id": "test_000018", "history": [], "query": "在吗", "label": {"intent": "TALK", "slots": {}, "need_clarify": false}}
+{"id": "test_000019", "history": [], "query": "我报一条运单你帮我录：镇江到重庆，煤炭3000吨，3月末装货", "label": {"intent": "SAVE_ORDER", "slots": {"cargo_name": "煤炭", "cargo_weight": "3000吨", "route_from": "镇江", "route_to": "重庆", "date_time": "3月末"}, "need_clarify": false}}
+{"id": "test_000020", "history": [], "query": "能不能优化一下搜索功能，现在搜船名总是搜不到", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "test_000021", "history": [], "query": "麻烦帮我配船：南京到武汉，3000吨左右，本周装货", "label": {"intent": "FIND_SHIP", "slots": {"cargo_weight": "3000吨", "route_from": "南京", "route_to": "武汉", "date_time": "本周"}, "need_clarify": false}, "metadata": {"section": "找船"}}
+{"id": "test_000022", "history": [], "query": "帮我查查有没有船", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "test_000023", "history": [], "query": "沿江有什么好的加油站推荐吗", "label": {"intent": "QUERY_OIL_STATION", "slots": {}, "need_clarify": false}}
+{"id": "test_000024", "history": [], "query": "货船运输进度怎么查看", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": false}}
+{"id": "test_000025", "history": [], "query": "盱眙三河，到，湘潭，煤泥，2000吨左右，船到就装，有定金，装卸快", "label": {"intent": "FIND_SHIP", "slots": {"port_name": "盱眙三河", "cargo_name": "煤泥", "cargo_weight": "2000吨", "route_to": "湘潭"}, "need_clarify": false}, "metadata": {"section": "找船"}}
+{"id": "test_000026", "history": [], "query": "查一下武穴号的位置", "label": {"intent": "QUERY_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "test_000027", "history": [], "query": "你们这个怎么用", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "test_000028", "history": [], "query": "你好", "label": {"intent": "TALK", "slots": {}, "need_clarify": false}}
+{"id": "test_000029", "history": [], "query": "麻烦查下长江之星6号现在在哪", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "长江之星6号"}, "need_clarify": false}}
+{"id": "test_000030", "history": [], "query": "在吗", "label": {"intent": "TALK", "slots": {}, "need_clarify": false}}
+{"id": "test_000031", "history": [], "query": "台儿庄—颖上太和镇，抛江石，1000吨左右单机，需要单机数条，宽9米左右", "label": {"intent": "FIND_SHIP", "slots": {"cargo_weight": "1000吨"}, "need_clarify": true}, "metadata": {"section": "找船"}}
+{"id": "test_000032", "history": [], "query": "帮我预定这艘船", "label": {"intent": "TALK", "slots": {}, "need_clarify": true}}
+{"id": "test_000033", "history": [], "query": "长江之星 6 号走到哪段了", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "长江之星6号"}, "need_clarify": false}, "metadata": {"section": "查船"}}
+{"id": "test_000034", "history": [], "query": "苏货运01今天能到重庆吗", "label": {"intent": "DISPATCH_MONITOR", "slots": {"ship_name": "苏货运01"}, "need_clarify": false}}
+{"id": "test_000035", "history": [], "query": "华航118现在到哪了", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "华航118"}, "need_clarify": false}}
+{"id": "test_000036", "history": [], "query": "这条船什么时候年检", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "test_000037", "history": [], "query": "南京到武汉有没有3000-4000吨的自卸船", "label": {"intent": "FIND_SHIP", "slots": {"cargo_weight": "3000-4000吨", "route_from": "南京", "route_to": "武汉"}, "need_clarify": false}, "metadata": {"section": "找船"}}
+{"id": "test_000038", "history": [], "query": "帮我查下我那条船江海888进度怎么样", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "江海888"}, "need_clarify": false}}
+{"id": "test_000039", "history": [], "query": "你们这个系统太难用了，功能在哪都找不到", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "test_000040", "history": [], "query": "南京龙潭港区这两天会不会下雨", "label": {"intent": "QUERY_WEATHER", "slots": {"port_name": "南京龙潭"}, "need_clarify": false}}
+{"id": "test_000041", "history": [], "query": "帮我搜搜江北这一片有什么船", "label": {"intent": "FIND_SHIP", "slots": {"port_name": "江北"}, "need_clarify": false}, "metadata": {"section": "找船"}}
+{"id": "test_000042", "history": [], "query": "新建运单，装货镇江港，卸货重庆果园港，砂石3000吨，装期本周", "label": {"intent": "SAVE_ORDER", "slots": {"port_name": "镇江港", "cargo_name": "砂石", "cargo_weight": "3000吨", "route_to": "重庆果园港", "date_time": "本周"}, "need_clarify": false}, "metadata": {"section": "发布运单"}}
+{"id": "test_000043", "history": [], "query": "鲁济宁货6366到哪里了", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "鲁济宁货6366"}, "need_clarify": false}, "metadata": {"section": "查船"}}
+{"id": "test_000044", "history": [], "query": "船舶吨位和吃水是多少", "label": {"intent": "QUERY_SHIP_INFO", "slots": {}, "need_clarify": true}}
+{"id": "test_000045", "history": [], "query": "我的货延误了5天，损失谁负责", "label": {"intent": "FEEDBACK", "slots": {}, "need_clarify": false}}
+{"id": "test_000046", "history": [], "query": "8000吨船从南通到重庆多少钱", "label": {"intent": "QUERY_FREIGHT", "slots": {"cargo_weight": "8000吨", "route_from": "南通", "route_to": "重庆"}, "need_clarify": false}}
+{"id": "test_000047", "history": [], "query": "现在淮安船闸上行有多少条船在等待", "label": {"intent": "QUERY_SHIP", "slots": {"port_name": "淮安"}, "need_clarify": false}}
+{"id": "test_000048", "history": [], "query": "靖江到上海钢材5000吨运价多少", "label": {"intent": "QUERY_FREIGHT", "slots": {"cargo_name": "钢材", "cargo_weight": "5000吨", "route_from": "靖江", "route_to": "上海"}, "need_clarify": false}}
+{"id": "test_000049", "history": [], "query": "你们这个怎么用", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "test_000050", "history": [], "query": "查我上次那票货的运单", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}, "metadata": {"section": "历史运单"}}
+{"id": "test_000051", "history": [], "query": "查一下华航118位置和到港时间", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "华航118"}, "need_clarify": false}}
+{"id": "test_000052", "history": [], "query": "运单记录帮我查下", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}}
+{"id": "test_000053", "history": [], "query": "详细介绍一下运吨吨", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "test_000054", "history": [], "query": "查一下历史运单", "label": {"intent": "QUERY_ORDER", "slots": {}, "need_clarify": false}}
+{"id": "test_000055", "history": [], "query": "南京龙潭附近有哪些船在跑", "label": {"intent": "FIND_SHIP", "slots": {"port_name": "南京龙潭"}, "need_clarify": false}, "metadata": {"section": "找船"}}
+{"id": "test_000056", "history": [], "query": "帮我查一下", "label": {"intent": "TALK", "slots": {}, "need_clarify": true}}
+{"id": "test_000057", "history": [], "query": "这条船现在走到哪个航段了", "label": {"intent": "DISPATCH_MONITOR", "slots": {}, "need_clarify": true}}
+{"id": "test_000058", "history": [], "query": "芜湖附近哪里能加油", "label": {"intent": "QUERY_OIL_STATION", "slots": {"port_name": "芜湖"}, "need_clarify": false}}
+{"id": "test_000059", "history": [], "query": "宜昌到万州这段航线明天天气怎么样", "label": {"intent": "QUERY_WEATHER", "slots": {"route_from": "宜昌", "route_to": "万州", "date_time": "明天"}, "need_clarify": false}}
+{"id": "test_000060", "history": [], "query": "早上好", "label": {"intent": "TALK", "slots": {}, "need_clarify": false}}
+{"id": "test_000061", "history": [], "query": "长江口航道最新水深什么时候更新的", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {"port_name": "长江口"}, "need_clarify": false}}
+{"id": "test_000062", "history": [], "query": "长江下游有空的船吗", "label": {"intent": "FIND_SHIP", "slots": {"area_name": "长江下游"}, "need_clarify": false}}
+{"id": "test_000063", "history": [], "query": "怎么才能定", "label": {"intent": "TALK", "slots": {}, "need_clarify": true}, "metadata": {"section": "闲聊"}}
+{"id": "test_000064", "history": [], "query": "靖江到上海砂石运价", "label": {"intent": "QUERY_FREIGHT", "slots": {"cargo_name": "砂石", "route_from": "靖江", "route_to": "上海"}, "need_clarify": false}}
+{"id": "test_000065", "history": [], "query": "张家港这一片现在有空船不", "label": {"intent": "FIND_SHIP", "slots": {"port_name": "张家港"}, "need_clarify": false}, "metadata": {"section": "找船"}}
+{"id": "test_000066", "history": [], "query": "南京到南通砂石运价", "label": {"intent": "QUERY_FREIGHT", "slots": {"cargo_name": "砂石", "route_from": "南京", "route_to": "南通"}, "need_clarify": false}}
+{"id": "test_000067", "history": [], "query": "有合适的船吗", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": true}}
+{"id": "test_000068", "history": [], "query": "查一下华航118的船舶档案", "label": {"intent": "QUERY_SHIP_INFO", "slots": {"ship_name": "华航118"}, "need_clarify": false}}
+{"id": "test_000069", "history": [], "query": "帮我录一下：南京港装，宜昌卸，水泥2000吨，3月10号装，船主李四，电话13900001111", "label": {"intent": "SAVE_ORDER", "slots": {"port_name": "南京港", "cargo_name": "水泥", "cargo_weight": "2000吨", "route_to": "宜昌", "date_time": "3月10号"}, "need_clarify": false}}
+{"id": "test_000070", "history": [], "query": "南通到南通煤炭1万吨运价多少", "label": {"intent": "QUERY_FREIGHT", "slots": {"cargo_name": "煤炭", "cargo_weight": "1万吨", "route_from": "南通", "route_to": "南通"}, "need_clarify": false}}
+{"id": "test_000071", "history": [], "query": "在吗", "label": {"intent": "TALK", "slots": {}, "need_clarify": false}}
+{"id": "test_000072", "history": [], "query": "现在煤炭运费行情", "label": {"intent": "QUERY_FREIGHT", "slots": {"cargo_name": "煤炭"}, "need_clarify": false}}
+{"id": "test_000073", "history": [], "query": "俞垛79预计什么时候到港", "label": {"intent": "QUERY_SHIP", "slots": {"ship_name": "俞垛79"}, "need_clarify": false}}
+{"id": "test_000074", "history": [], "query": "江北一带附近有没有船", "label": {"intent": "FIND_SHIP", "slots": {"area_name": "江北一带"}, "need_clarify": false}}
+{"id": "test_000075", "history": [], "query": "重庆到南京有回程船吗，钢材3000吨", "label": {"intent": "FIND_SHIP", "slots": {"cargo_name": "钢材", "cargo_weight": "3000吨", "route_from": "重庆", "route_to": "南京"}, "need_clarify": false}}
+{"id": "test_000076", "history": [], "query": "安全法规有哪些？", "label": {"intent": "DOC_QA", "slots": {}, "need_clarify": false}}
+{"id": "test_000077", "history": [], "query": "查下南京到镇江这段航道水深", "label": {"intent": "QUERY_WATER_LEVEL", "slots": {"route_from": "南京", "route_to": "镇江"}, "need_clarify": false}}
+{"id": "test_000078", "history": [], "query": "涡阳，到，海门港闸内，煤矸，船到就装，有定金，装卸快，", "label": {"intent": "FIND_SHIP", "slots": {"port_name": "涡阳", "cargo_name": "煤矸", "route_to": "海门港闸内"}, "need_clarify": false}}
+{"id": "test_000079", "history": [], "query": "宁德--台州5000内近期", "label": {"intent": "FIND_SHIP", "slots": {}, "need_clarify": false}}
+{"id": "test_000080", "history": [], "query": "安徽在哪", "label": {"intent": "TALK", "slots": {}, "need_clarify": false}}
