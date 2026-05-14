@@ -318,6 +318,33 @@ def load_metadata_model_name(model_path: Path) -> str:
     return metadata.get("model_name", MODEL_NAME)
 
 
+def save_badcase_to_dir(bad_cases: list[dict[str, Any]], badcase_dir: Path, intent_labels: list[str]) -> None:
+    """
+    将 bad cases 按意图分类保存到 JSONL 文件。
+
+    每个意图一行，文件名如 FIND_SHIP.jsonl，共用同一目录。
+    如果某个意图没有 bad cases，则不生成对应文件。
+    """
+    badcase_dir.mkdir(parents=True, exist_ok=True)
+
+    # 按意图分组
+    by_intent: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for case in bad_cases:
+        gold_intent = case.get("gold", {}).get("intent", "UNKNOWN")
+        by_intent[gold_intent].append(case)
+
+    # 追加写入每个意图的 JSONL 文件
+    for intent, cases in by_intent.items():
+        intent_file = badcase_dir / f"{intent}.jsonl"
+        # 追加模式，防止覆盖历史版本积累的数据
+        mode = "a" if intent_file.exists() else "w"
+        with intent_file.open(mode, encoding="utf-8") as f:
+            for case in cases:
+                f.write(json.dumps(case, ensure_ascii=False) + "\n")
+
+    logger.info("Bad cases 已保存到 %s (%s 个意图)", badcase_dir, len(by_intent))
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="BERT 意图识别评测脚本")
     parser.add_argument("--model_path", type=str, required=True, help="模型权重路径")
@@ -325,6 +352,7 @@ def main() -> None:
     parser.add_argument("--batch_size", type=int, default=32)
     parser.add_argument("--max_length", type=int, default=256)
     parser.add_argument("--output_file", type=str, default="", help="评估结果输出路径，默认写到测试集同目录")
+    parser.add_argument("--badcase_dir", type=str, default="", help="Bad cases 输出目录，默认保存到 train/data/badcase")
     parser.add_argument("--device", type=str, default="cuda" if torch.cuda.is_available() else "cpu")
     args = parser.parse_args()
 
@@ -446,6 +474,11 @@ def main() -> None:
             gold = case.get("gold", {})
             pred = case.get("pred", {})
             print(f"     预期: {INTENT_LABELS_CN.get(gold.get('intent',''), gold.get('intent',''))} | 预测: {INTENT_LABELS_CN.get(pred.get('intent',''), pred.get('intent',''))}")
+
+    # 保存 bad cases 到指定目录
+    if bad_cases:
+        badcase_dir = Path(args.badcase_dir) if args.badcase_dir else (Path(test_path).parent.parent / "data" / "badcase")
+        save_badcase_to_dir(bad_cases, badcase_dir, INTENT_LABELS)
 
     print("\n" + "=" * 60)
     print(f"评测结果已保存到: {output_path}")
